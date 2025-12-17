@@ -14,7 +14,7 @@
 
     /* ------------------ TOKENS ------------------ */
     :root{
-      --green:#b7ff2a;
+      --green:#96d419;
       --purple:#b46bff;
       --orange:#ff9f1a;
       --blue:#3a8dff;
@@ -86,7 +86,7 @@
     .nav-links a.active::after {
       content: '';
       position: absolute;
-      bottom: -22px;
+      bottom: -7px;
       left: 0;
       right: 0;
       height: 2px;
