@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - MMCP Collectif</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav container">
+    <a href="index.html" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Apropos.html">À propos</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+      <li><a href="temoignages.html">Témoignages</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header container">
+    <h1>Contacte-nous</h1>
+    <p class="subtitle">Une question, une idée, une envie de collaborer ? On est là.</p>
+  </section>
+
+  <!-- CONTACT OPTIONS -->
+  <section class="section container">
+    <span class="label">Comment nous rejoindre</span>
+    <div class="cta-grid">
+      <div class="cta-card">
+        <h3>📧 Nous écrire</h3>
+        <p>Pour toute question ou demande d'information</p>
+        <a href="mailto:contact@mmcp-collectif.fr" class="btn" style="margin-top: 16px;">Envoyer un email</a>
+      </div>
+      <div class="cta-card">
+        <h3>🤝 Devenir membre</h3>
+        <p>Rejoins notre collectif et participe activement</p>
+        <a href="#" class="btn" style="margin-top: 16px;">S'inscrire</a>
+      </div>
+      <div class="cta-card">
+        <h3>🎤 Proposer un projet</h3>
+        <p>Tu as une idée ? Parlons-en ensemble</p>
+        <a href="#" class="btn" style="margin-top: 16px;">Soumettre</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section container">
+    <span class="label">Formulaire de contact</span>
+    <div class="contact-form-container">
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <select id="subject" name="subject" required>
+            <option value="">Sélectionne un sujet</option>
+            <option value="info">Demande d'information</option>
+            <option value="membre">Devenir membre</option>
+            <option value="projet">Proposition de projet</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-full">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section container">
+    <span class="label">Questions fréquentes</span>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Comment participer aux événements ?</h4>
+        <p>Tous nos événements sont annoncés sur notre page <a href="evenements.html">Événements</a>. La plupart sont gratuits et ouverts à tous. Il suffit de venir !</p>
+      </div>
+      <div class="faq-item">
+        <h4>Faut-il être expérimenté pour rejoindre ?</h4>
+        <p>Absolument pas ! Nous accueillons tous les niveaux, du débutant au confirmé. L'important c'est la passion et le respect.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Comment devenir bénévole ?</h4>
+        <p>Contacte-nous via le formulaire ci-dessus en précisant tes compétences et disponibilités. Nous sommes toujours à la recherche de bonnes volontés.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Proposez-vous des partenariats ?</h4>
+        <p>Oui ! Nous sommes ouverts aux collaborations avec d'autres collectifs, institutions culturelles et marques qui partagent nos valeurs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL & NEWSLETTER -->
+  <section class="section container cta">
+    <h2>Reste connecté</h2>
+    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Suis-nous sur les réseaux et inscris-toi à notre newsletter pour ne rien manquer.</p>
+    <div class="social-links">
+      <a href="#" class="social-btn">Instagram</a>
+      <a href="#" class="social-btn">Facebook</a>
+      <a href="#" class="social-btn">YouTube</a>
+      <a href="#" class="social-btn">TikTok</a>
+    </div>
+    <div class="newsletter" style="max-width: 480px; margin: 32px auto 0;">
+      <input type="email" placeholder="Ton email">
+      <button>S'abonner</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>MMCP Collectif</h4>
+          <p>Make Moves, Create Peace</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Ton email">
+            <button>S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
