@@ -1,0 +1,51 @@
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-logo > img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.nav-links a.active {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--green);
+}

@@ -1,0 +1,86 @@
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 64px 0 24px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-section p {
+    color: #999;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #999;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--green);
+}
+
+.footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 13px;
+}
+
+.newsletter {
+    display: flex;
+    border: 1px solid #333;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 12px 14px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+}
+
+.newsletter input::placeholder {
+    color: #666;
+}
+
+.newsletter button {
+    padding: 0 20px;
+    background: var(--green);
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: #a0e820;
+}
