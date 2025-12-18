@@ -45,5 +45,5 @@
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: var(--green);
+    border-color: var(--pink);
 }

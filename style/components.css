@@ -54,8 +54,8 @@
     background: var(--purple);
 }
 
-.card-tag.green {
-    background: var(--green);
+.card-tag.pink {
+    background: var(--pink);
     color: #000;
 }
 
@@ -115,8 +115,7 @@
 }
 
 .wed {
-    background: var(--green);
-    color: #000;
+    background: var(--pink);
 }
 
 .sun {
@@ -156,7 +155,7 @@
 .stat-number {
     font-size: 56px;
     font-weight: 900;
-    color: var(--green);
+    color: var(--pink);
     margin-bottom: 12px;
 }
 
@@ -188,7 +187,7 @@
 .testimonial-avatar {
     width: 56px;
     height: 56px;
-    background: var(--green);
+    background: var(--pink);
     color: #000;
     border-radius: 50%;
     display: flex;

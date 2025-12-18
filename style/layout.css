@@ -1,7 +1,6 @@
 /* ==========================================
    LAYOUT & GLOBAL UTILITIES
    ========================================== */
-
 .container {
     width: min(1120px, calc(100% - 48px));
     margin-inline: auto;
@@ -23,12 +22,16 @@
 }
 
 /* Color utilities */
-.green {
-    color: var(--green);
+.pink {
+    color: var(--pink);
 }
 
 .purple {
     color: var(--purple);
+}
+
+.orange {
+    color: var(--orange);
 }
 
 /* Buttons */
@@ -52,14 +55,15 @@
 }
 
 .btn-primary {
-    background: var(--green);
-    color: #000 !important;
+    background: var(--pink);
+    color: #ffffff !important;
     border: none !important;
     padding: 18px 32px;
     font-size: 16px;
+    border-radius: 10px;
 }
 
 .btn-primary:hover {
-    background: #fff;
-    color: #000;
+    background: var(--orange);
+    color: #ffffff;
 }

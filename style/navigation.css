@@ -32,11 +32,11 @@
 }
 
 .nav-links a:hover {
-    color: var(--green);
+    color: var(--pink);
 }
 
 .nav-links a.active {
-    color: var(--green);
+    color: var(--pink);
     font-weight: 600;
 }
 
@@ -47,5 +47,5 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--green);
+    background: var(--pink);
 }

@@ -95,7 +95,7 @@
 
 .faq-item {
     padding: 24px;
-    border-left: 3px solid var(--green);
+    border-left: 3px solid var(--pink);
     background: #fafafa;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .faq-item a {
-    color: var(--green);
+    color: var(--pink);
     font-weight: 600;
     text-decoration: underline;
 }
@@ -178,7 +178,7 @@
 
 .artist-role {
     font-size: 16px;
-    color: var(--green);
+    color: var(--pink);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -290,7 +290,7 @@
 
 .highlight-item {
     padding: 20px;
-    border-left: 3px solid var(--green);
+    border-left: 3px solid var(--pink);
     background: #fafafa;
 }
 
