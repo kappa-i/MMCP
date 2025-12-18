@@ -10,6 +10,7 @@
 
 .intro {
     padding: 0 2rem;
+    gap: var(--spacing-md);
 }
 
 .intro p {
@@ -39,6 +40,10 @@
     border-radius: 4%;
 }
 
+.artist-bio {
+    color: var(--black);
+}
+
 #equipe .artist-photo img {
     position: absolute;
     top: 0;
@@ -57,6 +62,10 @@
 
 #equipe .artist-header {
     margin: 0;
+}
+
+.section{
+    padding: 2rem;
 }
 
 #equipe .section.container {
@@ -86,7 +95,7 @@
 }
 
 .histoire-grid p {
-    color: var(--gray);
+    color: var(--black);
     font-size: 17px;
     line-height: 1.7;
     margin-bottom: var(--spacing-md);

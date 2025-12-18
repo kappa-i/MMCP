@@ -17,8 +17,8 @@
     grid-template-columns: 400px 1fr;
     gap: var(--spacing-xl);
     align-items: start;
-    margin-bottom: var(--spacing-xl);
-}
+    padding: 0 5rem;
+    }
 
 .artist-info h2 {
     font-size: 48px;

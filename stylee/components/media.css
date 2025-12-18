@@ -41,13 +41,11 @@
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Le conteneur de la vidéo reste petit */
     margin: 8rem auto;
     background: transparent;
-    border: 1px solid var(--line);
-    padding-bottom: 0;
+    overflow: visible; /* CRUCIAL : permet au fond de déborder */
     z-index: 1;
-    overflow: visible;
 }
 
 .video-container .fond {
@@ -55,12 +53,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 110%;
-    height: auto;
+    
+    width: 350vw;
+    max-width: 1200px;
+
     z-index: -1;
     pointer-events: none;
-    border-radius: 30px;
+
+    animation: blob 10s ease-in-out infinite;
 }
+
+@keyframes blob {
+  0% {
+    border-radius: 600px 600px 600px 600px / 550px 550px 550px 550px;
+  }
+  50% {
+    border-radius: 650px 400px 650px 400px / 600px 350px 600px 350px;
+  }
+  100% {
+    border-radius: 600px 600px 600px 600px / 550px 550px 550px 550px;
+  }
+}
+
 
 .video-placeholder {
     position: relative;
