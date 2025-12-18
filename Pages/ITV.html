@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interviews - MMCP Collectif</title>
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/stylee/main.css">
 </head>
 
 <body>
@@ -185,15 +185,18 @@
         menuBtn.innerHTML = '✕';
         menuBtn.style.color = 'var(--white)';
         navLogo.style.display = 'none';
+        disableScroll();
 
       } else {
         menuBtn.innerHTML = '☰';
         menuBtn.style.color = 'var(--black)';
         navLogo.style.display = 'block';
+        enableScroll();
       }
     });
   </script>
 
+  <script src="/js/app.js"></script>
 
 </body>
 

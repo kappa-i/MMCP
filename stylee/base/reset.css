@@ -1,11 +1,16 @@
-/* ==========================================
-   RESET & BASE STYLES
-   ========================================== */
+/* ============================================================
+   1-BASE/RESET.CSS
+   ============================================================ */
 
 body, html {
     overflow-x: hidden;
     width: 100%;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 *,
 *::before,
@@ -15,9 +20,9 @@ body, html {
 
 body {
     margin: 0;
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-base);
     background: #fff;
-    color: #0a0a0a;
+    color: var(--black);
     line-height: 1.6;
 }
 
@@ -34,6 +39,7 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    font-family: inherit;
 }
 
 ul {
@@ -41,3 +47,10 @@ ul {
     padding: 0;
     margin: 0;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+

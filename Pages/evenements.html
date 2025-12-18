@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Événements - MMCP Collectif</title>
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/stylee/main.css">
 </head>
 
 <body>
@@ -121,12 +121,17 @@
       if (navMenu.classList.contains('open')) {
         menuBtn.innerHTML = '✕';
         navLogo.style.display = 'none';
+        disableScroll();
+
       } else {
         menuBtn.innerHTML = '☰';
         navLogo.style.display = 'block';
+        enableScroll();
       }
-    });</script>
+    });
+  </script>
 
+  <script src="/js/app.js"></script>
 
 </body>
 

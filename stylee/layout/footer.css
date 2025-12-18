@@ -1,24 +1,24 @@
-/* ==========================================
-   FOOTER
-   ========================================== */
+/* ============================================================
+   2-LAYOUT/FOOTER.CSS
+   ============================================================ */
 
 footer {
-    background: #0a0a0a;
-    color: #fff;
-    padding: 64px 0 24px;
+    background: var(--black);
+    color: var(--white);
+    padding: var(--spacing-2xl) 0 var(--spacing-md);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    margin-bottom: 48px;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .footer-section h4 {
     font-size: 16px;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .footer-section p {
@@ -35,7 +35,7 @@ footer {
 .footer-links a {
     color: #999;
     font-size: 14px;
-    transition: color 0.2s;
+    transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
@@ -43,7 +43,7 @@ footer {
 }
 
 .footer-bottom {
-    padding-top: 24px;
+    padding-top: var(--spacing-md);
     border-top: 1px solid #333;
     text-align: center;
 }
@@ -64,7 +64,7 @@ footer {
     border: none;
     outline: none;
     background: transparent;
-    color: #fff;
+    color: var(--white);
     font-size: 14px;
 }
 
@@ -77,10 +77,11 @@ footer {
     background: var(--pink);
     font-weight: 700;
     font-size: 14px;
-    color: #000;
-    transition: background 0.2s;
+    color: var(--black);
+    transition: background var(--transition-fast);
 }
 
 .newsletter button:hover {
-    background: #a0e820;
+    background: var(--green);
 }
+

@@ -1,6 +1,6 @@
-/* ==========================================
-   FORMS
-   ========================================== */
+/* ============================================================
+   3-COMPONENTS/FORMS.CSS
+   ============================================================ */
 
 .contact-form-container {
     max-width: 720px;
@@ -10,19 +10,19 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-md);
 }
 
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: var(--spacing-md);
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--spacing-xs);
 }
 
 .form-group label {
@@ -39,7 +39,7 @@
     font-family: inherit;
     font-size: 15px;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color var(--transition-fast);
 }
 
 .form-group input:focus,

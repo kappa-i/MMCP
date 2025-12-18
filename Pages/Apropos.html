@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À propos - MMCP</title>
-  <link rel="stylesheet" href="/style/style.css">
-  <link rel="stylesheet" href="/style/apropos.css">
+  <link rel="stylesheet" href="/stylee/main.css">
 </head>
 
 <body>
@@ -42,7 +41,7 @@
 
   <section class="section container" id="equipe">
     <h2>Les Fondatrices</h2>
-    
+
     <!-- Iris -->
     <div class="artist-section">
       <div class="artist-header">
@@ -55,14 +54,14 @@
           <h2>Iris</h2>
           <span class="artist-role">Co-fondatrice & Responsable Communication</span>
           <p class="artist-bio">
-            Danseuse depuis l'âge de 12 ans, Iris a grandi au sein de la scène hip-hop européenne. 
-            Spécialisée en breaking et house dance, elle a participé à de nombreux battles internationaux 
-            et remporté plusieurs titres prestigieux. Sa vision artistique et son sens aigu de l'organisation 
+            Danseuse depuis l'âge de 12 ans, Iris a grandi au sein de la scène hip-hop européenne.
+            Spécialisée en breaking et house dance, elle a participé à de nombreux battles internationaux
+            et remporté plusieurs titres prestigieux. Sa vision artistique et son sens aigu de l'organisation
             font d'elle l'âme créative de MMCP.
           </p>
           <p class="artist-bio">
-            Passionnée par la transmission, Iris croit fermement au pouvoir de la danse pour créer du lien 
-            social. Elle coordonne tous les événements artistiques de l'association et développe des 
+            Passionnée par la transmission, Iris croit fermement au pouvoir de la danse pour créer du lien
+            social. Elle coordonne tous les événements artistiques de l'association et développe des
             programmes pour rendre la culture hip-hop accessible à tous.
           </p>
         </div>
@@ -81,13 +80,13 @@
           <h2>Naye</h2>
           <span class="artist-role">Co-fondatrice & Directrice Artistique</span>
           <p class="artist-bio">
-            Issue du milieu du graffiti et du rap, Naye apporte à MMCP une perspective unique sur la 
-            culture hip-hop. DJ et beatmaker à ses heures perdues, elle comprend l'importance de la musique 
+            Issue du milieu du graffiti et du rap, Naye apporte à MMCP une perspective unique sur la
+            culture hip-hop. DJ et beatmaker à ses heures perdues, elle comprend l'importance de la musique
             dans la danse et veille à créer des expériences sonores mémorables lors de chaque événement.
           </p>
           <p class="artist-bio">
-            En tant que responsable communication, Naye gère la présence digitale de MMCP et développe 
-            des partenariats stratégiques. Son réseau étendu dans le milieu culturel permet à l'association 
+            En tant que responsable communication, Naye gère la présence digitale de MMCP et développe
+            des partenariats stratégiques. Son réseau étendu dans le milieu culturel permet à l'association
             de collaborer avec les meilleurs artistes et de toucher un public toujours plus large.
           </p>
         </div>
@@ -103,32 +102,32 @@
         <div>
           <h3>L'origine</h3>
           <p>
-            Née de la passion commune d'Iris et Naye pour la culture hip-hop, MMCP (Move, Create, Unite) 
-            a vu le jour en 2023 avec une vision claire : créer un espace où l'art urbain, la danse et la 
-            communauté se rencontrent. Ce qui a commencé comme des sessions improvisées entre amis est 
+            Née de la passion commune d'Iris et Naye pour la culture hip-hop, MMCP (Move, Create, Unite)
+            a vu le jour en 2023 avec une vision claire : créer un espace où l'art urbain, la danse et la
+            communauté se rencontrent. Ce qui a commencé comme des sessions improvisées entre amis est
             rapidement devenu un mouvement culturel vibrant.
           </p>
           <p>
-            Nos premières cypher sessions dans les parcs locaux ont attiré des danseurs de tous horizons, 
-            créant une énergie unique qui définit aujourd'hui l'esprit MMCP. Cette authenticité et cette 
+            Nos premières cypher sessions dans les parcs locaux ont attiré des danseurs de tous horizons,
+            créant une énergie unique qui définit aujourd'hui l'esprit MMCP. Cette authenticité et cette
             ouverture restent au cœur de tout ce que nous faisons.
           </p>
         </div>
         <div>
           <h3>Notre Mission</h3>
           <p>
-            MMCP s'engage à promouvoir et préserver la culture hip-hop dans toute sa diversité. Nous 
-            organisons des événements de danse, battles, workshops et showcases qui célèbrent le breaking, 
+            MMCP s'engage à promouvoir et préserver la culture hip-hop dans toute sa diversité. Nous
+            organisons des événements de danse, battles, workshops et showcases qui célèbrent le breaking,
             le popping, le locking, le krump et toutes les formes d'expression urbaine.
           </p>
           <p>
-            Au-delà de la danse, nous créons des ponts entre générations et cultures, offrant un espace 
-            inclusif où chacun peut s'exprimer, apprendre et grandir. Notre objectif est de faire rayonner 
+            Au-delà de la danse, nous créons des ponts entre générations et cultures, offrant un espace
+            inclusif où chacun peut s'exprimer, apprendre et grandir. Notre objectif est de faire rayonner
             la culture hip-hop tout en transmettant ses valeurs fondamentales : respect, créativité et unité.
           </p>
         </div>
       </div>
-      
+
       <!-- Valeurs clés -->
       <div class="highlights valeurs-section">
         <div class="highlight-item">
@@ -160,14 +159,20 @@
         menuBtn.innerHTML = '✕';
         menuBtn.style.color = 'var(--white)';
         navLogo.style.display = 'none';
+        disableScroll();
+
       } else {
         menuBtn.innerHTML = '☰';
         menuBtn.style.color = 'var(--black)';
         navLogo.style.display = 'block';
+        enableScroll();
       }
     });
+
   </script>
 
+  <script src="/js/app.js"></script>
+  
 </body>
 
 </html>

@@ -1,0 +1,55 @@
+/* ============================================================
+   4-SECTIONS/EVENTS.CSS
+   ============================================================ */
+
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+    gap: var(--spacing-md);
+    border: 1px solid var(--line);
+    padding: var(--spacing-md);
+    transition: box-shadow var(--transition-normal);
+}
+
+.event:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.date {
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--white);
+    padding: 12px 0;
+    border-radius: var(--radius-sm);
+}
+
+.fri { background: var(--orange); }
+.sat { background: var(--purple); }
+.wed { background: var(--pink); }
+.sun { background: var(--blue); }
+
+.event h4 {
+    font-size: 20px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.event span {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.event-details {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: var(--spacing-xs);
+}
+

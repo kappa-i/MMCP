@@ -1,0 +1,29 @@
+/* ============================================================
+   2-LAYOUT/HEADER.CSS
+   ============================================================ */
+
+header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1100;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+/* Bouton Burger */
+header button {
+    font-size: 36px;
+    color: white;
+    z-index: 1101;
+    transition: transform var(--transition-normal);
+}
+

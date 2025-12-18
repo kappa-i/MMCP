@@ -1,0 +1,135 @@
+/* ============================================================
+   3-COMPONENTS/CARDS.CSS
+   ============================================================ */
+
+/* Card de base */
+.card {
+    border: 1px solid var(--line);
+    padding: var(--spacing-lg);
+    transition: box-shadow var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Card tags */
+.card-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+    color: var(--white);
+}
+
+.card-tag.orange { background: var(--orange); }
+.card-tag.purple { background: var(--purple); }
+.card-tag.pink { background: var(--pink); color: var(--black); }
+.card-tag.blue { background: var(--blue); }
+
+/* CTA Cards */
+.cta-card {
+    border: 1px solid var(--line);
+    padding: var(--spacing-lg);
+    transition: box-shadow var(--transition-normal);
+}
+
+.cta-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.cta-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cta-card p {
+    color: var(--gray);
+    font-size: 15px;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    border: 1px solid var(--line);
+    padding: var(--spacing-lg);
+    background: #fafafa;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: 20px;
+}
+
+.testimonial-avatar {
+    width: 56px;
+    height: 56px;
+    background: var(--pink);
+    color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.testimonial-header h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.testimonial-header span {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.testimonial-card p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* FAQ Cards */
+.faq-item {
+    padding: var(--spacing-md);
+    border-left: 3px solid var(--pink);
+    background: #fafafa;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.faq-item a {
+    color: var(--pink);
+    font-weight: 600;
+    text-decoration: underline;
+}

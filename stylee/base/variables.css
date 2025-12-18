@@ -1,0 +1,45 @@
+/* ============================================================
+   1-BASE/VARIABLES.CSS
+   ============================================================ */
+
+:root {
+    /* Couleurs principales */
+    --pink: #fc54b9;
+    --purple: #a346ff;
+    --orange: #ee8d05;
+    --blue: #3a8dff;
+    --green: #a0e820;
+    
+    /* Couleurs neutres */
+    --gray: #777;
+    --line: #eaeaea;
+    --black: #0a0a0a;
+    --white: #ffffff;
+    
+    /* Espacements */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+    
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 10px;
+    
+    /* Fonts */
+    --font-base: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Arial Black', sans-serif;
+    
+    /* Shadows */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+}

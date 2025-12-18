@@ -1,0 +1,93 @@
+/* ============================================================
+   3-COMPONENTS/NAVIGATION.CSS
+   ============================================================ */
+
+/* Menu fullscreen */
+.nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #27242a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: top var(--transition-slow);
+}
+
+.nav.open {
+    top: 0;
+}
+
+/* Liste de navigation */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.nav-links li {
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 50%, transparent 50%);
+    background-position: bottom;
+    background-size: 20px 1px;
+    background-repeat: repeat-x;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+}
+
+.nav.open .nav-links li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+/* Positionnement décalé */
+.nav-links li:nth-child(1) { 
+    justify-content: flex-start; 
+    padding-left: 10%; 
+    transition-delay: 0.2s; 
+}
+
+.nav-links li:nth-child(2) { 
+    justify-content: flex-end; 
+    padding-right: 15%; 
+    transition-delay: 0.3s; 
+}
+
+.nav-links li:nth-child(3) { 
+    justify-content: center; 
+    transition-delay: 0.4s; 
+}
+
+.nav-links li:nth-child(4) { 
+    justify-content: flex-start; 
+    padding-left: 20%; 
+    transition-delay: 0.5s; 
+}
+
+.nav-links li:nth-child(5) { 
+    justify-content: flex-end; 
+    padding-right: 5%; 
+    transition-delay: 0.6s; 
+}

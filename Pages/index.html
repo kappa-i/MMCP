@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MMCP Collectif - Accueil</title>
-  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/stylee/main.css">
 </head>
 
 <body>
@@ -16,14 +16,14 @@
   </header>
 
   <nav class="nav container">
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Accueil</a></li>
-            <li><a href="Apropos.html">À propos</a></li>
-            <li><a href="evenements.html">Événements</a></li>
-            <li><a href="ITV.html">Interviews</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="Apropos.html">À propos</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+      <li><a href="ITV.html">Interviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- HERO -->
   <section class="hero container" id="hero">
@@ -43,25 +43,32 @@
     <a href="/Pages/Apropos.html" class="btn">Découvrir le collectif</a>
   </section>
 
-<script>
-  const menuBtn = document.querySelector('header button');
-  const navMenu = document.querySelector('.nav');
-  const navLogo = document.querySelector('.nav-logo img');
+  <script>
+    const menuBtn = document.querySelector('header button');
+    const navMenu = document.querySelector('.nav');
+    const navLogo = document.querySelector('.nav-logo img');
 
-  menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    
-    // Change l'icône de burger à X
-    if (navMenu.classList.contains('open')) {
-      menuBtn.innerHTML = '✕';
-      navLogo.style.display = 'none';
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
 
-    } else {
-      menuBtn.innerHTML = '☰';
-      navLogo.style.display = 'block';
-    }
-  });
-</script>  
+      // Change l'icône de burger à X
+      if (navMenu.classList.contains('open')) {
+        menuBtn.innerHTML = '✕';
+        navLogo.style.display = 'none';
+        document.body.classList.add("hide-scroll"); // enlève la scrollbar
+        disableScroll();
+
+      } else {
+        menuBtn.innerHTML = '☰';
+        navLogo.style.display = 'block';
+        document.body.classList.remove("hide-scroll"); // remet la scrollbar
+        enableScroll();
+      }
+    });
+  </script>
+
+  <script src="/js/app.js"></script>
+
 </body>
 
 </html>

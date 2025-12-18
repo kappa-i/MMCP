@@ -1,0 +1,177 @@
+/* ============================================================
+   6-UTILITIES/RESPONSIVE.CSS
+   ============================================================ */
+
+@media (max-width: 900px) {
+    /* Grilles responsive */
+    .intro,
+    .grid,
+    .voices,
+    .cta-grid,
+    .testimonials-grid,
+    .stats-grid,
+    .faq-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Events */
+    .event {
+        grid-template-columns: 64px 1fr;
+    }
+
+    .event .btn {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 12px;
+    }
+
+    /* Navigation */
+    .nav-links {
+        gap: var(--spacing-sm);
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        font-size: 2rem;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Artist sections */
+    .artist-header {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .artist-photo {
+        padding-bottom: 100%;
+    }
+
+    .artist-info h2 {
+        font-size: 36px;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero grid */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .next-event-hero {
+        padding: 60px 0;
+    }
+
+    /* Histoire grid */
+    .histoire-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Intro section À propos */
+    .intro h2 {
+        font-size: 36px;
+        padding: 0;
+    }
+
+    .bandeau {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Container plus étroit sur petit mobile */
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    /* Réduction des espacements */
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    /* Titres plus petits */
+    h1 {
+        font-size: clamp(36px, 10vw, 56px);
+    }
+
+    h2 {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    /* Navigation mobile */
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .nav-links li {
+        padding: 20px 0;
+    }
+
+    /* Reset du positionnement décalé sur très petit écran */
+    .nav-links li:nth-child(1),
+    .nav-links li:nth-child(2),
+    .nav-links li:nth-child(3),
+    .nav-links li:nth-child(4),
+    .nav-links li:nth-child(5) {
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* Bouton burger plus petit */
+    header button {
+        font-size: 28px;
+    }
+
+    /* Logo plus petit */
+    .nav-logo img {
+        height: 40px;
+    }
+
+    /* Video container */
+    .video-container {
+        max-width: 100%;
+        margin: 4rem auto;
+    }
+
+    .video-placeholder > video {
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer-content {
+        gap: var(--spacing-lg);
+    }
+
+    /* Bandeau */
+    .bandeau {
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+    }
+
+    /* Artist socials */
+    .artist-socials {
+        gap: 2rem;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+}

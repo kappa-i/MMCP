@@ -1,0 +1,14 @@
+/* ============================================================
+   2-LAYOUT/CONTAINER.CSS
+   ============================================================ */
+
+.container {
+    width: min(1120px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.section {
+    padding: var(--spacing-3xl) 0;
+    border-top: 1px solid var(--line);
+}
+
