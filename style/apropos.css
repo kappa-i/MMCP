@@ -1,0 +1,81 @@
+/* ==========================================
+   PAGE À PROPOS
+   ========================================== */
+
+/* Section équipe */
+#equipe h2 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+/* Section histoire */
+#histoire h2 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 32px;
+}
+
+.histoire-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.histoire-grid h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--pink);
+}
+
+.histoire-grid p {
+    color: var(--gray);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.histoire-grid p:last-child {
+    margin-bottom: 0;
+}
+
+.valeurs-section {
+    margin-top: 48px;
+}
+
+/* Section CTA rejoindre */
+#rejoindre .cta h2 {
+    font-size: 56px;
+}
+
+#rejoindre .cta-text {
+    color: var(--gray);
+    font-size: 17px;
+    margin-top: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#rejoindre .cta-button-wrapper {
+    margin-top: 32px;
+}
+
+#rejoindre .btn-primary {
+    display: inline-block;
+    padding: 16px 32px;
+    background: var(--pink);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+#rejoindre .btn-primary:hover {
+    background: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
