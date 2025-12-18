@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Événements - MMCP Collectif</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/style/style.css">
@@ -10,34 +11,40 @@
 
 <body>
 
+  <header class="header container">
+    <a href="#" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
+    <button>☰</button>
+  </header>
+
   <nav class="nav container">
-    <a href="index.html" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="Apropos.html">À propos</a></li>
-      <li><a href="evenements.html" class="active">Événements</a></li>
+      <li><a href="evenements.html">Événements</a></li>
       <li><a href="ITV.html">Interviews</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-<section class="next-event-hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <span class="label" style="color: var(--green);">Le prochain grand rendez-vous</span>
-      <h1>Popping Workshop <br><span class="purple">With Poppin-C</span></h1>
-      <p class="event-meta">Samedi 21 Janvier • 14h00 - 18h00 • Studio de danse Lausanne</p>
-      <p class="event-description">
-        Venez découvrir les bases et les techniques avancées du popping avec des intervenants de renommée internationale. Session accompagnée d'un DJ live.
-      </p>
-      <a href="paiement.html" class="btn btn-primary">Y participer (5€)</a>
+  <section class="next-event-hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="label" style="color: var(--green);">Le prochain grand rendez-vous</span>
+        <h1>Popping Workshop <br><span class="purple">With Poppin-C</span></h1>
+        <p class="event-meta">Samedi 21 Janvier • 14h00 - 18h00 • Studio de danse Lausanne</p>
+        <p class="event-description">
+          Venez découvrir les bases et les techniques avancées du popping avec des intervenants de renommée
+          internationale. Session accompagnée d'un DJ live.
+        </p>
+        <a href="paiement.html" class="btn btn-primary">Y participer (5€)</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://joatfestival.com/wp-content/uploads/2025/05/JOAT_Popping_352_1300x700-768x414.jpg"
+          alt="Affiche de l'événement">
+      </div>
     </div>
-    
-    <div class="hero-image">
-      <img src="https://joatfestival.com/wp-content/uploads/2025/05/JOAT_Popping_352_1300x700-768x414.jpg" alt="Affiche de l'événement">
-    </div>
-  </div>
-</section>
+  </section>
 
   <section class="section container">
     <span class="label">Calendrier des sessions</span>
@@ -95,12 +102,33 @@
 
   <section class="section container cta">
     <h2>Ne rate aucun événement</h2>
-    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Inscris-toi à notre newsletter pour recevoir toutes nos actualités.</p>
+    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Inscris-toi à notre newsletter pour recevoir toutes
+      nos actualités.</p>
     <div class="newsletter" style="max-width: 480px; margin: 0 auto;">
       <input type="email" placeholder="Ton email">
       <button>S'abonner</button>
     </div>
   </section>
 
+  <script>
+    const menuBtn = document.querySelector('header button');
+    const navMenu = document.querySelector('.nav');
+    const navLogo = document.querySelector('.nav-logo img');
+
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+
+      // Change l'icône de burger à X
+      if (navMenu.classList.contains('open')) {
+        menuBtn.innerHTML = '✕';
+        navLogo.style.display = 'none';
+      } else {
+        menuBtn.innerHTML = '☰';
+        navLogo.style.display = 'block';
+      }
+    });</script>
+
+
 </body>
+
 </html>

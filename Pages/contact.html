@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - MMCP Collectif</title>
   <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <header class="header container">
+    <a href="#" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
+    <button style="color: var(--black);">☰</button>
+  </header>
+
   <nav class="nav container">
-    <a href="index.html" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="Apropos.html">À propos</a></li>
       <li><a href="evenements.html">Événements</a></li>
       <li><a href="ITV.html">Interviews</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -64,7 +68,7 @@
             <input type="email" id="email" name="email" required>
           </div>
         </div>
-        
+
         <div class="form-group">
           <label for="subject">Sujet</label>
           <select id="subject" name="subject" required>
@@ -93,19 +97,23 @@
     <div class="faq-grid">
       <div class="faq-item">
         <h4>Comment participer aux événements ?</h4>
-        <p>Tous nos événements sont annoncés sur notre page <a href="evenements.html">Événements</a>. La plupart sont gratuits et ouverts à tous. Il suffit de venir !</p>
+        <p>Tous nos événements sont annoncés sur notre page <a href="evenements.html">Événements</a>. La plupart sont
+          gratuits et ouverts à tous. Il suffit de venir !</p>
       </div>
       <div class="faq-item">
         <h4>Faut-il être expérimenté pour rejoindre ?</h4>
-        <p>Absolument pas ! Nous accueillons tous les niveaux, du débutant au confirmé. L'important c'est la passion et le respect.</p>
+        <p>Absolument pas ! Nous accueillons tous les niveaux, du débutant au confirmé. L'important c'est la passion et
+          le respect.</p>
       </div>
       <div class="faq-item">
         <h4>Comment devenir bénévole ?</h4>
-        <p>Contacte-nous via le formulaire ci-dessus en précisant tes compétences et disponibilités. Nous sommes toujours à la recherche de bonnes volontés.</p>
+        <p>Contacte-nous via le formulaire ci-dessus en précisant tes compétences et disponibilités. Nous sommes
+          toujours à la recherche de bonnes volontés.</p>
       </div>
       <div class="faq-item">
         <h4>Proposez-vous des partenariats ?</h4>
-        <p>Oui ! Nous sommes ouverts aux collaborations avec d'autres collectifs, institutions culturelles et marques qui partagent nos valeurs.</p>
+        <p>Oui ! Nous sommes ouverts aux collaborations avec d'autres collectifs, institutions culturelles et marques
+          qui partagent nos valeurs.</p>
       </div>
     </div>
   </section>
@@ -113,7 +121,8 @@
   <!-- SOCIAL & NEWSLETTER -->
   <section class="section container cta">
     <h2>Reste connecté</h2>
-    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Suis-nous sur les réseaux et inscris-toi à notre newsletter pour ne rien manquer.</p>
+    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Suis-nous sur les réseaux et inscris-toi à notre
+      newsletter pour ne rien manquer.</p>
     <div class="social-links">
       <a href="#" class="social-btn">Instagram</a>
       <a href="#" class="social-btn">Facebook</a>
@@ -158,5 +167,28 @@
     </div>
   </footer>
 
+  <script>
+    const menuBtn = document.querySelector('header button');
+    const navMenu = document.querySelector('.nav');
+    const navLogo = document.querySelector('.nav-logo img');
+
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+
+      // Change l'icône de burger à X
+      if (navMenu.classList.contains('open')) {
+        menuBtn.innerHTML = '✕';
+        menuBtn.style.color = 'var(--white)';
+        navLogo.style.display = 'none';
+      } else {
+        menuBtn.innerHTML = '☰';
+        menuBtn.style.color = 'var(--black)';
+        navLogo.style.display = 'block';
+      }
+    });
+  </script>
+
+
 </body>
+
 </html>

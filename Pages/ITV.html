@@ -10,14 +10,17 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <header class="header container">
+    <a href="#" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
+    <button style="color: var(--black);">☰</button>
+  </header>
+
   <nav class="nav container">
-    <a href="index.html" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="Apropos.html">À propos</a></li>
       <li><a href="evenements.html">Événements</a></li>
-      <li><a href="ITV.html" class="active">Interviews</a></li>
+      <li><a href="ITV.html">Interviews</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -57,29 +60,28 @@
           </div>
         </div>
       </div>
-        <div class="video-container">
-                  <img src="/img/1.jpg" alt="fond" class="fond">
+      <div class="video-container">
+        <img src="/img/1.jpg" alt="fond" class="fond">
 
-          <!-- Remplace l'URL ci-dessous par ton lien YouTube -->
-          <!-- <iframe src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-          <div class="video-placeholder">
-            <video src="/img/ITW avec Tali.mp4" controls>
-              Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
-          </div>
+        <!-- Remplace l'URL ci-dessous par ton lien YouTube -->
+        <!-- <iframe src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <div class="video-placeholder">
+          <video src="/img/ITW avec Tali.mp4" controls>
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
         </div>
+      </div>
 
       <div class="artist-socials">
         <a href="#" class="social-link">
-          <span>📷</span>
-          Instagram
+          <img src="/img/instagram.png" alt="logo Instagram" class="icon">
         </a>
         <a href="#" class="social-link">
-          <span>🎵</span>
+          <img src="/img/tiktok.png" alt="logo TikTok" class="icon">
           TikTok
         </a>
         <a href="#" class="social-link">
-          <span>▶️</span>
+          <img src="/img/youtube.png" alt="logo YouTube" class="icon">
           YouTube
         </a>
       </div>
@@ -117,7 +119,7 @@
         </div>
       </div>
       <div class="video-container">
-          <img src="/img/1.jpg" alt="fond" class="fond">
+        <img src="/img/1.jpg" alt="fond" class="fond">
 
         <!-- Remplace l'URL ci-dessous par ton lien YouTube -->
         <!-- <iframe src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
@@ -185,6 +187,29 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const menuBtn = document.querySelector('header button');
+    const navMenu = document.querySelector('.nav');
+    const navLogo = document.querySelector('.nav-logo img');
+
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+
+      // Change l'icône de burger à X
+      if (navMenu.classList.contains('open')) {
+        menuBtn.innerHTML = '✕';
+        menuBtn.style.color = 'var(--white)';
+        navLogo.style.display = 'none';
+
+      } else {
+        menuBtn.innerHTML = '☰';
+        menuBtn.style.color = 'var(--black)';
+        navLogo.style.display = 'block';
+      }
+    });
+  </script>
+
 
 </body>
 

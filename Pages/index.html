@@ -15,6 +15,16 @@
     <button>☰</button>
   </header>
 
+  <nav class="nav container">
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="ITV.html">Interviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
   <!-- HERO -->
   <section class="hero container" id="hero">
 
@@ -33,6 +43,25 @@
     <a href="/Pages/Apropos.html" class="btn">Découvrir le collectif</a>
   </section>
 
+<script>
+  const menuBtn = document.querySelector('header button');
+  const navMenu = document.querySelector('.nav');
+  const navLogo = document.querySelector('.nav-logo img');
+
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    
+    // Change l'icône de burger à X
+    if (navMenu.classList.contains('open')) {
+      menuBtn.innerHTML = '✕';
+      navLogo.style.display = 'none';
+
+    } else {
+      menuBtn.innerHTML = '☰';
+      navLogo.style.display = 'block';
+    }
+  });
+</script>  
 </body>
 
 </html>

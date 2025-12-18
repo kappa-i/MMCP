@@ -32,6 +32,10 @@
         font-size: 14px;
     }
 
+    .nav-links a {
+        font-size: 2rem;
+    }
+
     /* Forms */
     .form-row {
         grid-template-columns: 1fr;
@@ -72,11 +76,5 @@
 
     .next-event-hero {
         padding: 60px 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .nav-links {
-        display: none;
     }
 }
