@@ -34,26 +34,65 @@
 
 /* Main hero section */
 .hero {
-    padding: 120px 0 140px;
-    border-bottom: 1px solid var(--line);
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    border: none;
+    overflow: hidden;
 }
 
 .hero.container {
-    
-    height: 80vh;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    height: 100vh;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Overlay pour améliorer la lisibilité */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .hero h1 {
+    position: relative;
+    z-index: 2;
     font-size: clamp(56px, 10vw, 120px);
     line-height: 0.95;
     font-weight: 900;
+    color: var(--white);
 }
 
 .hero p {
+    display: flex;
+    position: relative;
+    z-index: 2;
     max-width: 520px;
-    margin: 32px 0 40px;
-    color: var(--gray);
+    margin: 32px auto 40px;
+    color: var(--white);
     font-size: 18px;
+    width: 90%;
 }
 
 /* Next event hero */

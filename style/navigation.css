@@ -1,51 +1,58 @@
 /* ==========================================
-   NAVIGATION
+   NAVIGATION & HEADER
    ========================================== */
 
-.nav {
+header.container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espace le logo et le bouton */
     align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--line);
+    padding: 20px 5%; /* Utilise un % pour que ça ne colle pas aux bords de l'écran */
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* TRÈS IMPORTANT */
+    box-sizing: border-box; /* Pour que le padding ne dépasse pas des 100% */
+    z-index: 1000; /* Pour rester au-dessus de la vidéo */
 }
-
-.nav-logo > img {
-    width: 100px;
-    height: auto;
-}
-
+/* Le conteneur de la liste */
 .nav-links {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     list-style: none;
-    gap: 28px;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
+/* Chaque ligne du menu */
+.nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ligne fine comme dans la vidéo */
+    padding: 20px 0;
+    display: flex;
+}
+
+/* Style des liens */
 .nav-links a {
-    color: var(--black);
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.2s;
-    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: clamp(2rem, 8vw, 5rem); /* Taille adaptative */
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Arial Black', sans-serif; /* Pour l'aspect gras et moderne */
 }
 
+/* Placement décalé (Reproduit la vidéo) */
+.nav-links li:nth-child(1) { justify-content: flex-start; padding-left: 10%; }
+.nav-links li:nth-child(2) { justify-content: flex-end; padding-right: 15%; }
+.nav-links li:nth-child(3) { justify-content: center; }
+.nav-links li:nth-child(4) { justify-content: flex-start; padding-left: 20%; }
+.nav-links li:nth-child(5) { justify-content: flex-end; padding-right: 5%; }
+
+/* Effet Hover (Couleur qui change au survol) */
 .nav-links a:hover {
-    color: var(--pink);
-}
-
-.nav-links a.active {
-    color: var(--pink);
-    font-weight: 600;
-}
-
-.nav-links a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -7px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--pink);
+    color: var(--pink); /* Ou la couleur que tu souhaites */
+    letter-spacing: 5px; /* Petit effet de mouvement au survol */
 }

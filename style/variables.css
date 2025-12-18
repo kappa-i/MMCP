@@ -3,11 +3,12 @@
    ========================================== */
 
 :root {
-    --pink: #e575b9;
-    --purple: #b46bff;
-    --orange: #ff9f1a;
+    --pink: #fc54b9;
+    --purple: #a346ff;
+    --orange: #ee8d05;
     --blue: #3a8dff;
     --gray: #777;
     --line: #eaeaea;
     --black: #0a0a0a;
+    --white: #ffffff;
 }
