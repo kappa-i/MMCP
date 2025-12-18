@@ -77,4 +77,9 @@
     .next-event-hero {
         padding: 60px 0;
     }
+
+    .intro h2 {
+        font-size: 36px;
+        padding: 0;
+    }
 }

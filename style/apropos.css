@@ -79,3 +79,57 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+.intro p {
+    margin-top: 3rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/* Fix pour afficher les vraies images */
+#equipe .photo-placeholder {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 4%;
+}
+
+.artist-photo{
+    border-radius: 4%;
+}
+
+#equipe .artist-photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+.artist-section {
+    margin: 0 0 5rem 0;
+    padding: 0;
+    border: none;
+}
+
+.artist-header {
+    margin: 0;
+}
+
+.section.container {
+    border: none;;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.bandeau{
+    margin-top: 5rem;
+    padding: 5rem;
+}
+
+.intro{
+    padding: 0 2rem;
+}

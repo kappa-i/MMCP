@@ -222,7 +222,6 @@
     align-items: center;
     gap: 8px;
     padding: 12px 20px;
-    border: 1px solid var(--line);
     font-size: 14px;
     font-weight: 600;
     color: var(--black);
@@ -230,14 +229,13 @@
     border-radius: 10px;
 }
 
-.social-link:hover {
-    background: var(--black);
-    color: #fff;
-    border-color: var(--black);
-}
-
 .social-link span {
     font-size: 18px;
+}
+
+.icon{
+    width: 60px;
+    height: 60px;
 }
 
 /* Video container */
