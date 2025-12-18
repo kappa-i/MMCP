@@ -3,83 +3,87 @@
    ========================================== */
 
 @media (max-width: 900px) {
-    /* Grid layouts */
-    .intro,
-    .grid,
-    .voices,
-    .cta-grid,
-    .testimonials-grid,
-    .stats-grid,
-    .faq-grid,
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
+  /* Grid layouts */
+  .intro,
+  .grid,
+  .voices,
+  .cta-grid,
+  .testimonials-grid,
+  .stats-grid,
+  .faq-grid,
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
 
-    /* Events */
-    .event {
-        grid-template-columns: 64px 1fr;
-    }
+  /* Events */
+  .event {
+    grid-template-columns: 64px 1fr;
+  }
 
-    .event .btn {
-        grid-column: 2;
-        justify-self: start;
-        margin-top: 12px;
-    }
+  .event .btn {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 12px;
+  }
 
-    /* Navigation */
-    .nav-links {
-        gap: 16px;
-        font-size: 14px;
-    }
+  /* Navigation */
+  .nav-links {
+    gap: 16px;
+    font-size: 14px;
+  }
 
-    .nav-links a {
-        font-size: 2rem;
-    }
+  .nav-links a {
+    font-size: 2rem;
+  }
 
-    /* Forms */
-    .form-row {
-        grid-template-columns: 1fr;
-    }
+  /* Forms */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
 
-    /* Stats */
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    /* Artist sections */
-    .artist-header {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
+  /* Artist sections */
+  .artist-header {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 
-    .artist-photo {
-        padding-bottom: 100%;
-    }
+  .artist-photo {
+    padding-bottom: 100%;
+  }
 
-    .artist-info h2 {
-        font-size: 36px;
-    }
+  .artist-info h2 {
+    font-size: 36px;
+  }
 
-    .highlights {
-        grid-template-columns: 1fr;
-    }
+  .highlights {
+    grid-template-columns: 1fr;
+  }
 
-    /* Hero grid */
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+  /* Hero grid */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
-    .hero-image img {
-        height: 350px;
-    }
+  .hero-image img {
+    height: 350px;
+  }
 
-    .next-event-hero {
-        padding: 60px 0;
-    }
+  .next-event-hero {
+    padding: 60px 0;
+  }
 
-    .intro h2 {
-        font-size: 36px;
-        padding: 0;
-    }
+  .intro h2 {
+    font-size: 36px;
+    padding: 0;
+  }
+
+  .histoire-grid {
+    grid-template-columns: 1fr;
+  }
 }
