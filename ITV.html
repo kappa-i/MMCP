@@ -200,25 +200,6 @@
       }
     });
 
-    // Fix iOS video loading
-    document.addEventListener('DOMContentLoaded', function() {
-      const videos = document.querySelectorAll('video');
-      
-      videos.forEach(video => {
-        // Force le chargement des métadonnées sur iOS
-        video.load();
-        
-        // Événement quand les métadonnées sont chargées
-        video.addEventListener('loadedmetadata', function() {
-          console.log('Video metadata loaded');
-        });
-
-        // Événement en cas d'erreur
-        video.addEventListener('error', function(e) {
-          console.error('Video loading error:', e);
-        });
-      });
-    });
   </script>
 
   <div class="up-container">
