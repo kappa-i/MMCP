@@ -109,6 +109,11 @@
 
 .hero-content {
     z-index: 2;
+    padding: 40px 24px;
+}
+
+.hero-content h1{
+    font-size: 48px;
 }
 
 .hero-image {
@@ -128,7 +133,7 @@
     font-size: 18px;
     font-weight: 600;
     color: var(--line);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
 }
 
 .next-event-hero .event-description {

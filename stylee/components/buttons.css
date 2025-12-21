@@ -62,3 +62,34 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+/* Style du bouton Retour en haut */
+.up-container {
+    position: fixed; /* Reste visible à l'écran lors du scroll */
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background-color: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre pour le détacher du fond */
+    
+    /* État masqué par défaut */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease; /* Animation fluide */
+    cursor: pointer;
+}
+
+/* État affiché via JavaScript */
+.up-container.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.up {
+    width: 40px;
+    height: 40px;
+    display: block; /* Supprime l'espace sous l'image */
+}
