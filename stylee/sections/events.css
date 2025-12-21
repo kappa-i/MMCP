@@ -1,5 +1,5 @@
 /* ============================================================
-   4-SECTIONS/EVENTS.CSS
+   4-SECTIONS/EVENTS.CSS - RESPONSIVE AMÉLIORÉ
    ============================================================ */
 
 .events {
@@ -31,18 +31,10 @@
   border-radius: var(--radius-sm);
 }
 
-.fri {
-  background: var(--orange);
-}
-.sat {
-  background: var(--purple);
-}
-.wed {
-  background: var(--pink);
-}
-.sun {
-  background: var(--blue);
-}
+.fri { background: var(--orange); }
+.sat { background: var(--purple); }
+.wed { background: var(--pink); }
+.sun { background: var(--blue); }
 
 .event h4 {
   font-size: 20px;
@@ -68,6 +60,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background: var(--black);
 }
 
 .hero-grid {
@@ -88,6 +81,14 @@
   flex-direction: column;
   justify-content: center;
   max-width: 650px;
+}
+
+.hero-content h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.1;
+  font-weight: 900;
+  margin: 20px 0;
+  color: var(--white);
 }
 
 .hero-image {
@@ -119,23 +120,14 @@
   object-fit: cover;
 }
 
-/* Styles spécifiques pour le countdown */
+/* Countdown */
 .countdown {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   margin: 32px 0;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
-
-/* .countdown-item {
-      text-align: center;
-      min-width: 80px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 16px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      transition: all var(--transition-fast);
-    } */
 
 .countdown-item:hover {
   border-color: var(--pink);
@@ -144,7 +136,7 @@
 }
 
 .countdown-number {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 900;
   color: var(--pink);
   line-height: 1;
@@ -154,17 +146,33 @@
 }
 
 .countdown-label {
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
-/* Grille adaptative pour les prochains événements */
+.event-meta {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--line);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.event-description {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 32px;
+}
+
+/* Grille des prochains événements */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   margin-top: 40px;
 }
@@ -254,7 +262,7 @@
   font-size: 16px;
 }
 
-/* Instagram feed pour événements passés */
+/* Instagram feed */
 .instagram-feed {
   display: flex;
   flex-wrap: wrap;
@@ -264,20 +272,19 @@
 
 .feed-item {
   position: relative;
-  flex: 1 1 calc(50% - 8px);
+  flex: 1 1 calc(25% - 12px);
   aspect-ratio: 1;
   overflow: hidden;
   cursor: pointer;
   background: var(--black);
-  min-width: 280px;
+  min-width: 200px;
 }
 
 .feed-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-normal),
-    opacity var(--transition-normal);
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
 .feed-item:hover img {
@@ -316,33 +323,40 @@
   letter-spacing: 0.05em;
 }
 
-/* CTA voir plus */
 .past-events-cta {
   margin-top: 40px;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .countdown {
-    gap: 16px;
-  }
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
 
-  .countdown-item {
-    min-width: 60px;
-    padding: 12px;
-  }
-
-  .countdown-number {
-    font-size: 36px;
+/* Tablettes et petits écrans (≤ 1024px) */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 60px 40px;
+    max-width: 600px;
   }
 
   .hero-image {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    clip-path: none;
+    width: 50%;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
   }
 
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .feed-item {
+    flex: 1 1 calc(33.333% - 11px);
+    min-width: 180px;
+  }
+}
+
+/* Tablettes portrait (≤ 768px) */
+@media (max-width: 768px) {
   .next-event-hero {
     min-height: auto;
   }
@@ -351,17 +365,227 @@
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  
-  .countdown {
-    justify-content: center;
+
+  .hero-content {
+    padding: 40px 24px;
+    max-width: 100%;
   }
 
+  .hero-content h1 {
+    font-size: clamp(32px, 8vw, 48px);
+    margin: 16px 0;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    clip-path: none;
+    order: -1; /* Place l'image avant le contenu */
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+  }
+
+
+  .countdown {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .countdown-item {
+    min-width: 60px;
+    padding: 10px 8px;
+  }
+
+  .countdown-number {
+    font-size: 32px;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+  }
+
+  .event-meta {
+    font-size: 14px;
+  }
+
+  .event-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  /* Event cards en 1 colonne */
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .event-card-image {
+    height: 180px;
+  }
+
+  .event-card-content {
+    padding: 20px;
+  }
+
+  .event-card h3 {
+    font-size: 20px;
+  }
+
+  /* Feed en 2 colonnes */
   .instagram-feed {
     gap: 12px;
   }
 
   .feed-item {
     flex: 1 1 calc(50% - 6px);
-    min-width: 150px;
+    min-width: 140px;
+  }
+
+  .feed-title {
+    font-size: 16px;
+  }
+
+  .feed-date {
+    font-size: 11px;
+  }
+
+  .past-events-cta {
+    margin-top: 32px;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 32px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(28px, 10vw, 40px);
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .countdown-item {
+    min-width: 50px;
+    padding: 8px 6px;
+  }
+
+  .countdown-number {
+    font-size: 28px;
+  }
+
+  .countdown-label {
+    font-size: 9px;
+  }
+
+  .event-meta {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .event-description {
+    font-size: 14px;
+  }
+
+  /* Bouton primaire plus petit */
+  .hero-content .btn-primary {
+    padding: 14px 24px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .event-card-image {
+    height: 160px;
+  }
+
+  .event-card-content {
+    padding: 16px;
+  }
+
+  .event-card h3 {
+    font-size: 18px;
+  }
+
+  .event-card-detail {
+    font-size: 13px;
+  }
+
+  /* Feed reste en 2 colonnes mais plus compact */
+  .feed-item {
+    min-width: 120px;
+  }
+
+  .feed-overlay {
+    padding: 12px;
+  }
+
+  .feed-title {
+    font-size: 14px;
+  }
+
+  .feed-date {
+    font-size: 10px;
+  }
+}
+
+/* Très petits mobiles (≤ 360px) */
+@media (max-width: 360px) {
+  .hero-content {
+    padding: 24px 16px;
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
+  .countdown-item {
+    min-width: 45px;
+    padding: 6px 4px;
+  }
+
+  .countdown-number {
+    font-size: 24px;
+  }
+
+  .hero-content .btn-primary {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .event-card-badge {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+/* Mode paysage mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  .next-event-hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 40px 24px;
+  }
+
+  .countdown {
+    margin: 16px 0;
+  }
+
+  .event-description {
+    margin-bottom: 20px;
   }
 }
