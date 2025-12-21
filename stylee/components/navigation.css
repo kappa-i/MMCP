@@ -15,11 +15,13 @@
     align-items: center;
     z-index: 1000;
     transition: top var(--transition-slow);
+    opacity: 0;
 }
 
 .nav.open {
     top: 0;
     width: 100%;
+    opacity: 1;
 }
 
 .nav.container {
