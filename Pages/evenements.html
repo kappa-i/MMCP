@@ -6,110 +6,283 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Événements - MMCP Collectif</title>
   <link rel="stylesheet" href="/stylee/main.css">
+
 </head>
 
 <body>
 
   <header class="header container">
-    <a href="#" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
-    <button>☰</button>
+    <a href="/Pages/index.html" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
+    <button style="color: var(--black);">☰</button>
   </header>
 
   <nav class="nav container">
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="Apropos.html">À propos</a></li>
-      <li><a href="evenements.html">Événements</a></li>
+      <li><a href="evenements.html" class="active">Événements</a></li>
       <li><a href="ITV.html">Interviews</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- HERO EVENT -->
   <section class="next-event-hero">
-    <div class="container hero-grid">
+    <div class="hero-grid">
       <div class="hero-content">
-        <span class="label" style="color: var(--green);">Le prochain grand rendez-vous</span>
+
         <h1>Popping Workshop <br><span class="purple">With Poppin-C</span></h1>
-        <p class="event-meta">Samedi 21 Janvier • 14h00 - 18h00 • Studio de danse Lausanne</p>
+        
+        <!-- Countdown Timer -->
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-label">Jours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-label">Heures</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-label">Secondes</span>
+          </div>
+        </div>
+
+        <p class="event-meta">Samedi 25 Janvier 2025 • 14h00 - 18h00 • Studio de danse Lausanne</p>
         <p class="event-description">
           Venez découvrir les bases et les techniques avancées du popping avec des intervenants de renommée
           internationale. Session accompagnée d'un DJ live.
         </p>
-        <a href="paiement.html" class="btn btn-primary">Y participer (5€)</a>
+        <a href="paiement.html" class="btn btn-primary">Je m'inscris maintenant (5€)</a>
       </div>
 
       <div class="hero-image">
-        <img src="https://joatfestival.com/wp-content/uploads/2025/05/JOAT_Popping_352_1300x700-768x414.jpg"
+        <img src="https://img.redbull.com/images/q_auto,f_auto/redbullcom/2020/4/8/xgjnoy3dasweywasdssf/red-bull-dance-your-style-world-final-2019-poppin-c"
           alt="Affiche de l'événement">
       </div>
     </div>
   </section>
 
+  <!-- PROCHAINS ÉVÉNEMENTS -->
   <section class="section container">
     <span class="label">Calendrier des sessions</span>
-    <div class="events">
-      <div class="event">
-        <div class="date fri">FRI<br>16</div>
-        <div>
-          <h4>Cypher Night Vol.12</h4>
-          <span>Open freestyle session</span>
-          <p class="event-details">19h00 - 23h00 • Salle communautaire • Entrée libre</p>
+    <h2 style="margin: 20px 0 0; font-size: 40px; font-weight: 900;">Prochains événements</h2>
+
+    <div class="events-grid">
+      
+      <!-- Event Card 1 -->
+      <div class="event-card">
+        <div class="event-card-image">
+          <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800" alt="Cypher Night">
+          <span class="event-card-badge">Gratuit</span>
         </div>
-        <a href="paiement.html" class="btn">Réserver</a>
+        <div class="event-card-content">
+          <span class="event-card-date">Vendredi 16 Janvier</span>
+          <h3>Cypher Night Vol.12</h3>
+          <div class="event-card-details">
+            <div class="event-card-detail">
+              <span>🕐</span>
+              <span>19h00 - 23h00</span>
+            </div>
+            <div class="event-card-detail">
+              <span>📍</span>
+              <span>Salle communautaire</span>
+            </div>
+            <div class="event-card-detail">
+              <span>🎯</span>
+              <span>Open freestyle session</span>
+            </div>
+          </div>
+          <a href="paiement.html" class="btn btn-full">Réserver ma place</a>
+        </div>
       </div>
 
-      <div class="event">
-        <div class="date wed">WED<br>25</div>
-        <div>
-          <h4>Community Jam</h4>
-          <span>Open session multi-disciplines</span>
-          <p class="event-details">18h00 - 22h00 • Parc urbain • Gratuit</p>
+      <!-- Event Card 2 -->
+      <div class="event-card">
+        <div class="event-card-image">
+          <img src="https://images.unsplash.com/photo-1545224144-b38cd309ef69?w=800" alt="Community Jam">
+          <span class="event-card-badge">Gratuit</span>
         </div>
-        <a href="paiement.html" class="btn">Réserver</a>
+        <div class="event-card-content">
+          <span class="event-card-date">Mercredi 25 Janvier</span>
+          <h3>Community Jam</h3>
+          <div class="event-card-details">
+            <div class="event-card-detail">
+              <span>🕐</span>
+              <span>18h00 - 22h00</span>
+            </div>
+            <div class="event-card-detail">
+              <span>📍</span>
+              <span>Parc urbain</span>
+            </div>
+            <div class="event-card-detail">
+              <span>🎯</span>
+              <span>Open session multi-disciplines</span>
+            </div>
+          </div>
+          <a href="paiement.html" class="btn btn-full">Réserver ma place</a>
+        </div>
       </div>
 
-      <div class="event">
-        <div class="date sun">SUN<br>30</div>
-        <div>
-          <h4>Youth Workshop Special</h4>
-          <span>Atelier pour les 10-16 ans</span>
-          <p class="event-details">10h00 - 13h00 • Centre culturel • Gratuit</p>
+      <!-- Event Card 3 -->
+      <div class="event-card">
+        <div class="event-card-image">
+          <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=800" alt="Youth Workshop">
+          <span class="event-card-badge">Gratuit</span>
         </div>
-        <a href="paiement.html" class="btn">Réserver</a>
+        <div class="event-card-content">
+          <span class="event-card-date">Dimanche 30 Janvier</span>
+          <h3>Youth Workshop Special</h3>
+          <div class="event-card-details">
+            <div class="event-card-detail">
+              <span>🕐</span>
+              <span>10h00 - 13h00</span>
+            </div>
+            <div class="event-card-detail">
+              <span>📍</span>
+              <span>Centre culturel</span>
+            </div>
+            <div class="event-card-detail">
+              <span>🎯</span>
+              <span>Atelier pour les 10-16 ans</span>
+            </div>
+          </div>
+          <a href="paiement.html" class="btn btn-full">Réserver ma place</a>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- ÉVÉNEMENTS PASSÉS -->
   <section class="section container">
     <span class="label">Souvenirs</span>
-    <h2 style="margin-bottom: 40px; font-size: 32px; font-weight: 900;">Ils ont marqué l'année</h2>
-    <div class="voices">
-      <div class="voice">
-        <h4>Street Festival 2024</h4>
-        <p>Plus de 500 participants pour notre festival annuel. Une journée mémorable de partage et de culture.</p>
+    <h2 style="margin: 20px 0 0; font-size: 40px; font-weight: 900;">Nos derniers événements</h2>
+    <p style="color: var(--gray); margin-top: 12px; font-size: 17px;">
+      Revivez l'ambiance et l'énergie de nos sessions passées
+    </p>
+
+    <div class="instagram-feed">
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=800" alt="Street Festival 2024">
+        <div class="feed-overlay">
+          <div class="feed-title">Street Festival 2024</div>
+          <div class="feed-date">Décembre 2024</div>
+        </div>
       </div>
-      <div class="voice">
-        <h4>Summer Cypher Series</h4>
-        <p>8 semaines de sessions estivales en plein air qui ont rassemblé la communauté.</p>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800" alt="Summer Cypher Series">
+        <div class="feed-overlay">
+          <div class="feed-title">Summer Cypher Series</div>
+          <div class="feed-date">Août 2024</div>
+        </div>
       </div>
-      <div class="voice">
-        <h4>Battle Championship</h4>
-        <p>Compétition amicale qui a révélé de nouveaux talents et créé de belles connexions.</p>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800" alt="Battle Championship">
+        <div class="feed-overlay">
+          <div class="feed-title">Battle Championship</div>
+          <div class="feed-date">Juillet 2024</div>
+        </div>
       </div>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800" alt="Workshop Series">
+        <div class="feed-overlay">
+          <div class="feed-title">Workshop Series</div>
+          <div class="feed-date">Juin 2024</div>
+        </div>
+      </div>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800" alt="Workshop Series">
+        <div class="feed-overlay">
+          <div class="feed-title">Workshop Series</div>
+          <div class="feed-date">Juin 2024</div>
+        </div>
+      </div>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800" alt="Workshop Series">
+        <div class="feed-overlay">
+          <div class="feed-title">Workshop Series</div>
+          <div class="feed-date">Juin 2024</div>
+        </div>
+      </div>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800" alt="Workshop Series">
+        <div class="feed-overlay">
+          <div class="feed-title">Workshop Series</div>
+          <div class="feed-date">Juin 2024</div>
+        </div>
+      </div>
+
+      <div class="feed-item">
+        <img src="https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800" alt="Workshop Series">
+        <div class="feed-overlay">
+          <div class="feed-title">Workshop Series</div>
+          <div class="feed-date">Juin 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="past-events-cta">
+      <a href="past-events.html" class="btn btn-primary">Découvrir tous nos événements passés</a>
     </div>
   </section>
 
+  <!-- NEWSLETTER CTA -->
   <section class="section container cta">
     <h2>Ne rate aucun événement</h2>
-    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Inscris-toi à notre newsletter pour recevoir toutes
-      nos actualités.</p>
+    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">
+      Inscris-toi à notre newsletter pour recevoir toutes nos actualités.
+    </p>
     <div class="newsletter" style="max-width: 480px; margin: 0 auto;">
       <input type="email" placeholder="Ton email">
       <button>S'abonner</button>
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>MMCP Collectif</h4>
+          <p>Make Moves, Create Peace</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Ton email">
+            <button>S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
   <script>
+    // Menu burger
     const menuBtn = document.querySelector('header button');
     const navMenu = document.querySelector('.nav');
     const navLogo = document.querySelector('.nav-logo img');
@@ -117,18 +290,47 @@
     menuBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
 
-      // Change l'icône de burger à X
       if (navMenu.classList.contains('open')) {
         menuBtn.innerHTML = '✕';
+        menuBtn.style.color = 'var(--white)';
         navLogo.style.display = 'none';
         disableScroll();
-
       } else {
         menuBtn.innerHTML = '☰';
+        menuBtn.style.color = 'var(--black)';
         navLogo.style.display = 'block';
         enableScroll();
       }
     });
+
+    // Countdown Timer
+    function updateCountdown() {
+      // Date de l'événement (25 Janvier 2025 à 14h00)
+      const eventDate = new Date('2026-01-25T14:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      // Calculs
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Affichage avec zéros devant si nécessaire
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+      // Si le compte à rebours est terminé
+      if (distance < 0) {
+        document.getElementById('countdown').innerHTML = '<p style="color: var(--pink); font-size: 24px; font-weight: 700;">L\'événement a commencé !</p>';
+      }
+    }
+
+    // Mettre à jour chaque seconde
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 
   <script src="/js/app.js"></script>

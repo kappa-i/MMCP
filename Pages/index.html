@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MMCP Collectif - Accueil</title>
   <link rel="stylesheet" href="/stylee/main.css">
+  
 </head>
 
 <body>
@@ -40,7 +41,51 @@
       Un collectif culturel qui utilise le mouvement, la création et la communauté
       pour transformer les espaces urbains.
     </p>
-    <a href="/Pages/Apropos.html" class="btn">Découvrir le collectif</a>
+
+    <!-- Ticker Banner -->
+    <a href="evenements.html" class="ticker-banner">
+      <div class="ticker-wrapper">
+        <!-- Premier set -->
+        <div class="ticker-content">
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+        </div>
+        <!-- Deuxième set (duplication EXACTE pour effet infini) -->
+        <div class="ticker-content">
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+          <div class="ticker-item">
+            <span class="ticker-text">Prochains événements</span>
+          </div>
+          <span class="ticker-separator"></span>
+        </div>
+      </div>
+    </a>
+
   </section>
 
   <script>
@@ -51,17 +96,15 @@
     menuBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
 
-      // Change l'icône de burger à X
       if (navMenu.classList.contains('open')) {
         menuBtn.innerHTML = '✕';
         navLogo.style.display = 'none';
-        document.body.classList.add("hide-scroll"); // enlève la scrollbar
+        document.body.classList.add("hide-scroll");
         disableScroll();
-
       } else {
         menuBtn.innerHTML = '☰';
         navLogo.style.display = 'block';
-        document.body.classList.remove("hide-scroll"); // remet la scrollbar
+        document.body.classList.remove("hide-scroll");
         enableScroll();
       }
     });

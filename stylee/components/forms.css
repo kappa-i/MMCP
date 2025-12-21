@@ -1,5 +1,5 @@
 /* ============================================================
-   3-COMPONENTS/FORMS.CSS
+   Contact Form & FAQ Styles
    ============================================================ */
 
 .contact-form-container {
@@ -31,6 +31,10 @@
     color: var(--black);
 }
 
+.label{
+    margin-bottom: 2rem;
+}
+
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -47,3 +51,79 @@
 .form-group select:focus {
     border-color: var(--pink);
 }
+
+
+/* Styles spécifiques pour les FAQ rétractables */
+    .faq-item {
+      margin-bottom: var(--spacing-sm);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+    }
+
+    .faq-item.active {
+      background: #fafafa;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-md);
+      border: 1px solid var(--line);
+      background: var(--white);
+      transition: all var(--transition-fast);
+    }
+
+    .faq-item:hover .faq-question {
+      border-color: var(--pink);
+    }
+
+    .faq-question h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      flex: 1;
+    }
+
+    .faq-icon {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--pink);
+      transition: transform var(--transition-normal);
+      margin-left: var(--spacing-md);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-slow);
+      border-left: 3px solid var(--pink);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-content {
+      padding: var(--spacing-md);
+      background: #fafafa;
+    }
+
+    .faq-answer-content p {
+      color: var(--gray);
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .faq-answer-content a {
+      color: var(--pink);
+      font-weight: 600;
+      text-decoration: underline;
+    }

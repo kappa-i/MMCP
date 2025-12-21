@@ -53,3 +53,310 @@
     margin-top: var(--spacing-xs);
 }
 
+
+ /* Hero avec split diagonal asymétrique */
+    .next-event-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: 90vh;
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 650px;
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 1;
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, 
+        rgba(252, 84, 185, 0.3) 0%, 
+        rgba(163, 70, 255, 0.3) 100%);
+      z-index: 2;
+      mix-blend-mode: multiply;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Styles spécifiques pour le countdown */
+    .countdown {
+      display: flex;
+      gap: 24px;
+      margin: 32px 0;
+      justify-content: flex-start;
+    }
+
+    .countdown-item {
+      text-align: center;
+      min-width: 80px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      transition: all var(--transition-fast);
+    }
+
+    .countdown-item:hover {
+      border-color: var(--pink);
+      background: rgba(252, 84, 185, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .countdown-number {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--pink);
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+      text-shadow: 0 0 20px rgba(252, 84, 185, 0.5);
+    }
+
+    .countdown-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
+
+    /* Grille adaptative pour les prochains événements */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .event-card {
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: all var(--transition-normal);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--pink);
+    }
+
+    .event-card-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .event-card-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--orange);
+      color: var(--white);
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .event-card-content {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .event-card-date {
+      font-size: 14px;
+      color: var(--pink);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .event-card h3 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .event-card-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .event-card-detail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    .event-card-detail span:first-child {
+      font-size: 16px;
+    }
+
+    /* Instagram feed pour événements passés */
+    .instagram-feed {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .feed-item {
+      position: relative;
+      flex: 1 1 calc(50% - 8px);
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--black);
+      min-width: 280px;
+    }
+
+    .feed-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-normal), opacity var(--transition-normal);
+    }
+
+    .feed-item:hover img {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+
+    .feed-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+    }
+
+    .feed-item:hover .feed-overlay {
+      opacity: 1;
+    }
+
+    .feed-title {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .feed-date {
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* CTA voir plus */
+    .past-events-cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .countdown {
+        gap: 16px;
+      }
+
+      .countdown-item {
+        min-width: 60px;
+        padding: 12px;
+      }
+
+      .countdown-number {
+        font-size: 36px;
+      }
+
+      .hero-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        clip-path: none;
+      }
+
+      .next-event-hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 40px 24px;
+      }
+
+      .countdown {
+        justify-content: center;
+      }
+
+      .instagram-feed {
+        gap: 12px;
+      }
+
+      .feed-item {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 150px;
+      }
+    }
+

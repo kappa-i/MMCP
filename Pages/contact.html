@@ -6,22 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - MMCP Collectif</title>
   <link rel="stylesheet" href="/stylee/main.css">
+
 </head>
 
 <body>
 
   <header class="header container">
-    <a href="#" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
+    <a href="/Pages/index.html" class="nav-logo"><img src="/img/mmcp.png" alt="logo"></a>
     <button style="color: var(--black);">☰</button>
   </header>
 
   <nav class="nav container">
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="Apropos.html">À propos</a></li>
       <li><a href="evenements.html">Événements</a></li>
       <li><a href="ITV.html">Interviews</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
@@ -31,33 +32,11 @@
     <p class="subtitle">Une question, une idée, une envie de collaborer ? On est là.</p>
   </section>
 
-  <!-- CONTACT OPTIONS -->
-  <section class="section container">
-    <span class="label">Comment nous rejoindre</span>
-    <div class="cta-grid">
-      <div class="cta-card">
-        <h3>📧 Nous écrire</h3>
-        <p>Pour toute question ou demande d'information</p>
-        <a href="mailto:contact@mmcp-collectif.fr" class="btn" style="margin-top: 16px;">Envoyer un email</a>
-      </div>
-      <div class="cta-card">
-        <h3>🤝 Devenir membre</h3>
-        <p>Rejoins notre collectif et participe activement</p>
-        <a href="#" class="btn" style="margin-top: 16px;">S'inscrire</a>
-      </div>
-      <div class="cta-card">
-        <h3>🎤 Proposer un projet</h3>
-        <p>Tu as une idée ? Parlons-en ensemble</p>
-        <a href="#" class="btn" style="margin-top: 16px;">Soumettre</a>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT FORM -->
   <section class="section container">
     <span class="label">Formulaire de contact</span>
     <div class="contact-form-container">
-      <form class="contact-form">
+      <form class="contact-form" id="contactForm">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Nom complet</label>
@@ -91,38 +70,90 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ SECTION -->
   <section class="section container">
     <span class="label">Questions fréquentes</span>
-    <div class="faq-grid">
+    <div class="faq-container" style="max-width: 800px; margin: 40px auto 0;">
+      
       <div class="faq-item">
-        <h4>Comment participer aux événements ?</h4>
-        <p>Tous nos événements sont annoncés sur notre page <a href="evenements.html">Événements</a>. La plupart sont
-          gratuits et ouverts à tous. Il suffit de venir !</p>
+        <div class="faq-question">
+          <h4>Comment participer aux événements ?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Tous nos événements sont annoncés sur notre page <a href="evenements.html">Événements</a>. La plupart sont gratuits et ouverts à tous. Il suffit de venir ! Pour certains ateliers spéciaux, une inscription préalable peut être nécessaire.</p>
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h4>Faut-il être expérimenté pour rejoindre ?</h4>
-        <p>Absolument pas ! Nous accueillons tous les niveaux, du débutant au confirmé. L'important c'est la passion et
-          le respect.</p>
+        <div class="faq-question">
+          <h4>Faut-il être expérimenté pour rejoindre ?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Absolument pas ! Nous accueillons tous les niveaux, du débutant au confirmé. L'important c'est la passion et le respect. Nos événements sont conçus pour que chacun puisse participer et progresser à son rythme.</p>
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h4>Comment devenir bénévole ?</h4>
-        <p>Contacte-nous via le formulaire ci-dessus en précisant tes compétences et disponibilités. Nous sommes
-          toujours à la recherche de bonnes volontés.</p>
+        <div class="faq-question">
+          <h4>Comment devenir bénévole ?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Contacte-nous via le formulaire ci-dessus en précisant tes compétences et disponibilités. Nous sommes toujours à la recherche de bonnes volontés pour nous aider dans l'organisation d'événements, la communication ou la logistique.</p>
+          </div>
+        </div>
       </div>
+
       <div class="faq-item">
-        <h4>Proposez-vous des partenariats ?</h4>
-        <p>Oui ! Nous sommes ouverts aux collaborations avec d'autres collectifs, institutions culturelles et marques
-          qui partagent nos valeurs.</p>
+        <div class="faq-question">
+          <h4>Proposez-vous des partenariats ?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Oui ! Nous sommes ouverts aux collaborations avec d'autres collectifs, institutions culturelles et marques qui partagent nos valeurs. N'hésite pas à nous contacter pour discuter de ton projet.</p>
+          </div>
+        </div>
       </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Où se déroulent vos événements ?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Nos événements se déroulent dans différents lieux selon leur nature : studios de danse, espaces culturels, parcs urbains. Les adresses précises sont toujours indiquées dans les annonces d'événements.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Proposez-vous des cours réguliers ?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            <p>Nous organisons principalement des workshops et des sessions ouvertes. Pour connaître notre calendrier à jour et les prochaines sessions, consulte notre page <a href="evenements.html">Événements</a> ou inscris-toi à notre newsletter.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- SOCIAL & NEWSLETTER -->
   <section class="section container cta">
     <h2>Reste connecté</h2>
-    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Suis-nous sur les réseaux et inscris-toi à notre
-      newsletter pour ne rien manquer.</p>
+    <p style="color: #777; font-size: 18px; margin: 20px 0 40px;">Suis-nous sur les réseaux et inscris-toi à notre newsletter pour ne rien manquer.</p>
     <div class="social-links">
       <a href="#" class="social-btn">Instagram</a>
       <a href="#" class="social-btn">Facebook</a>
@@ -148,7 +179,6 @@
           <ul class="footer-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="Apropos.html">À propos</a></li>
-            <li><a href="projets.html">Projets</a></li>
             <li><a href="evenements.html">Événements</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -168,6 +198,7 @@
   </footer>
 
   <script>
+    // Menu burger
     const menuBtn = document.querySelector('header button');
     const navMenu = document.querySelector('.nav');
     const navLogo = document.querySelector('.nav-logo img');
@@ -175,19 +206,50 @@
     menuBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
 
-      // Change l'icône de burger à X
       if (navMenu.classList.contains('open')) {
         menuBtn.innerHTML = '✕';
         menuBtn.style.color = 'var(--white)';
         navLogo.style.display = 'none';
         disableScroll();
-
       } else {
         menuBtn.innerHTML = '☰';
         menuBtn.style.color = 'var(--black)';
         navLogo.style.display = 'block';
         enableScroll();
       }
+    });
+
+    // FAQ toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // Toggle le FAQ actuel
+        item.classList.toggle('active');
+      });
+    });
+
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Récupérer les données du formulaire
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+      
+      console.log('Form submitted:', data);
+      
+      // Afficher un message de confirmation
+      alert('Merci pour ton message ! Nous te répondrons dans les plus brefs délais.');
+      
+      // Réinitialiser le formulaire
+      contactForm.reset();
     });
   </script>
 

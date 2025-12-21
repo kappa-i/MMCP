@@ -50,7 +50,18 @@
     .artist-header {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
+        padding: 0 2rem;
     }
+
+    p{
+        padding: 0 2rem;
+
+    }
+
+    p.artist-bio {
+
+    padding: 0
+    ;    }
 
     .artist-photo {
         padding-bottom: 100%;
