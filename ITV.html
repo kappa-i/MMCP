@@ -7,6 +7,7 @@
   <title>Interviews - MMCP Collectif</title>
   <link rel="stylesheet" href="stylee/main.css">
   <script src="js/app.js"></script>
+
 </head>
 
 <body>
@@ -18,10 +19,10 @@
 
   <nav class="nav container">
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="Apropos.html">À propos</a></li>
       <li><a href="evenements.html">Événements</a></li>
-      <li><a href="ITV.html">Interviews</a></li>
+      <li><a href="ITV.html" class="active">Interviews</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -64,10 +65,13 @@
       <div class="video-container">
         <img src="img/1.jpg" alt="fond" class="fond">
 
-        <!-- Remplace l'URL ci-dessous par ton lien YouTube -->
-        <!-- <iframe src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <div class="video-placeholder">
-          <video src="img/ITW avec Tali.mp4" controls>
+          <video 
+            src="img/ITW avec Tali.mp4" 
+            controls 
+            preload="metadata"
+            playsinline
+            webkit-playsinline>
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
@@ -117,10 +121,13 @@
       <div class="video-container">
         <img src="img/1.jpg" alt="fond" class="fond">
 
-        <!-- Remplace l'URL ci-dessous par ton lien YouTube -->
-        <!-- <iframe src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <div class="video-placeholder">
-          <video src="img/GRODT_ITV.mp4" controls>
+          <video 
+            src="img/GRODT_ITV.mp4" 
+            controls 
+            preload="metadata"
+            playsinline
+            webkit-playsinline>
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
@@ -138,7 +145,6 @@
         </a>
       </div>
     </div>
-
 
   </section>
 
@@ -181,19 +187,37 @@
     menuBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
 
-      // Change l'icône de burger à X
       if (navMenu.classList.contains('open')) {
         menuBtn.innerHTML = '✕';
         menuBtn.style.color = 'var(--white)';
         navLogo.style.display = 'none';
         disableScroll();
-
       } else {
         menuBtn.innerHTML = '☰';
         menuBtn.style.color = 'var(--black)';
         navLogo.style.display = 'block';
         enableScroll();
       }
+    });
+
+    // Fix iOS video loading
+    document.addEventListener('DOMContentLoaded', function() {
+      const videos = document.querySelectorAll('video');
+      
+      videos.forEach(video => {
+        // Force le chargement des métadonnées sur iOS
+        video.load();
+        
+        // Événement quand les métadonnées sont chargées
+        video.addEventListener('loadedmetadata', function() {
+          console.log('Video metadata loaded');
+        });
+
+        // Événement en cas d'erreur
+        video.addEventListener('error', function(e) {
+          console.error('Video loading error:', e);
+        });
+      });
     });
   </script>
 
