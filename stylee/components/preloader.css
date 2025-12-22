@@ -95,7 +95,7 @@
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .graffiti-letter {
         font-size: 60px;
         stroke-width: 1.5;
@@ -107,4 +107,4 @@
         font-size: 50px;
         stroke-width: 1.2;
     }
-}
+} */
