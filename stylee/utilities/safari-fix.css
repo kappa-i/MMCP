@@ -1,0 +1,182 @@
+/* ============================================================
+   SAFARI-FIX.CSS - Corrections pour Safari Mobile
+   ============================================================ */
+
+/* FIX 1 : Vraie hauteur viewport sur Safari (pas de barre d'adresse) */
+:root {
+    /* Utiliser dvh (dynamic viewport height) pour Safari iOS 15+ */
+    --vh: 1vh;
+}
+
+/* Support moderne : dvh (viewport dynamique) */
+@supports (height: 100dvh) {
+    .hero,
+    .hero.container,
+    .preloader,
+    .page-transition,
+    .nav {
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+    }
+}
+
+/* Fallback pour Safari ancien : JavaScript calculera --vh */
+.hero,
+.hero.container {
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.preloader,
+.page-transition,
+.nav {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+/* FIX 2 : Empêcher le scroll élastique sur iOS */
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Quand le preloader est actif */
+body:has(.preloader:not(.hidden)) {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+/* Quand la page-transition est active */
+body:has(.page-transition.active) {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+/* Quand le menu est ouvert */
+body:has(.nav.open) {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+/* FIX 3 : Index.html spécifique - empêcher le scroll */
+.index-page .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+}
+
+/* Support moderne pour index */
+@supports (height: 100dvh) {
+    .index-page .hero {
+        height: 100dvh !important;
+    }
+}
+
+/* FIX 4 : Empêcher le bounce sur iOS */
+html {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
+}
+
+body {
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: auto;
+}
+
+/* FIX 5 : Preloader - bloquer complètement */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+    touch-action: none;
+}
+
+@supports (height: 100dvh) {
+    .preloader {
+        height: 100dvh !important;
+    }
+}
+
+/* FIX 6 : Page transition - bloquer complètement */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+    touch-action: none;
+}
+
+@supports (height: 100dvh) {
+    .page-transition {
+        height: 100dvh !important;
+    }
+}
+
+/* FIX 7 : Menu nav - bloquer complètement */
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+    touch-action: none;
+}
+
+@supports (height: 100dvh) {
+    .nav {
+        height: 100dvh !important;
+    }
+}
+
+/* FIX 8 : Ticker banner - toujours en bas */
+.ticker-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* FIX 9 : Classes utilitaires pour bloquer le scroll */
+.no-scroll {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    touch-action: none !important;
+    -webkit-overflow-scrolling: auto !important;
+}
+
+.prevent-bounce {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
+}
+
+/* FIX 10 : Safari iOS - empêcher le zoom sur double tap */
+* {
+    touch-action: manipulation;
+}
+
+/* Mais permettre le scroll normal sur les éléments scrollables */
+.nav-links,
+.section,
+main {
+    touch-action: auto;
+}
