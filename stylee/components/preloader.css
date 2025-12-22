@@ -83,3 +83,18 @@
         fill-opacity: 1;
     }
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+    .graffiti-letter {
+        font-size: 60px;
+        stroke-width: 1.5;
+    }
+}
+
+@media (max-width: 400px) {
+    .graffiti-letter {
+        font-size: 50px;
+        stroke-width: 1.2;
+    }
+}

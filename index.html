@@ -14,32 +14,25 @@
        PRELOADER
        ============================================================ -->
 
-  <div class="preloader">
-    <div class="graffiti-container">
-      <!-- Texte MMCP avec effet graffiti -->
-      <svg class="graffiti-text" viewBox="0 0 400 120">
-        <!-- Lettres avec effet dripping -->
-        <defs>
-          <!-- Filtre pour effet spray/texture -->
-          <filter id="spray">
-            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" />
-            <feDisplacementMap in="SourceGraphic" scale="3" />
-          </filter>
-
-          <!-- Gradient coloré -->
-          <linearGradient id="graffiti-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:var(--pink);stop-opacity:1" />
-            <stop offset="50%" style="stop-color:var(--purple);stop-opacity:1" />
-            <stop offset="100%" style="stop-color:var(--orange);stop-opacity:1" />
-          </linearGradient>
-        </defs>
-
-        <!-- Texte MMCP -->
-        <text x="200" y="70" text-anchor="middle" class="graffiti-letter">MMCP</text>
-      </svg>
-
-    </div>
+<div class="preloader">
+  <div class="graffiti-container">
+    <!-- Texte MMCP avec effet graffiti -->
+    <svg class="graffiti-text" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Gradient coloré -->
+        <linearGradient id="graffiti-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fc54b9;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#a346ff;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#ee8d05;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Texte MMCP (SANS FILTRE) -->
+      <text x="200" y="70" text-anchor="middle" class="graffiti-letter">MMCP</text>
+    </svg>
   </div>
+</div>
+
 
   <!-- ============================================================
        CONTENU PRINCIPAL
