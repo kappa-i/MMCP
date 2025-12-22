@@ -12,9 +12,11 @@
 <body>
 
   <header class="header container">
-    <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a>
+    <!-- <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a> -->
     <button style="color: var(--black);">☰</button>
   </header>
+
+  <div class="page-transition"></div>
 
   <nav class="nav container">
     <ul class="nav-links">
@@ -148,6 +150,7 @@
   </section>
 
   <script>
+    // Menu burger
     const menuBtn = document.querySelector('header button');
     const navMenu = document.querySelector('.nav');
     const navLogo = document.querySelector('.nav-logo img');
@@ -155,13 +158,11 @@
     menuBtn.addEventListener('click', () => {
       navMenu.classList.toggle('open');
 
-      // Change l'icône de burger à X
       if (navMenu.classList.contains('open')) {
         menuBtn.innerHTML = '✕';
         menuBtn.style.color = 'var(--white)';
         navLogo.style.display = 'none';
         disableScroll();
-
       } else {
         menuBtn.innerHTML = '☰';
         menuBtn.style.color = 'var(--black)';

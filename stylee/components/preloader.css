@@ -1,5 +1,5 @@
 /* ============================================================
-   3-COMPONENTS/PRELOADER.CSS - GRAFFITI DRIPPING
+   3-COMPONENTS/PRELOADER.CSS
    ============================================================ */
 
 .preloader {
@@ -13,18 +13,27 @@
         #666666 0%,
         #63007f 100%
     );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.8s ease;
+    transition: transform 0.5s ease-out; 
     overflow: hidden;
 }
 
 .preloader.hidden {
-    opacity: 0;
+    transform: translateX(-100%);
     pointer-events: none;
 }
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 /* ========================================
    CONTENEUR GRAFFITI

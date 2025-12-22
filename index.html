@@ -10,38 +10,31 @@
 
 <body>
 
-  <!-- ============================================================
-       PRELOADER
-       ============================================================ -->
+  <div class="preloader">
+    <div class="graffiti-container">
+      <!-- Texte MMCP avec effet graffiti -->
+      <svg class="graffiti-text" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Gradient coloré -->
+          <linearGradient id="graffiti-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fc54b9;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#a346ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ee8d05;stop-opacity:1" />
+          </linearGradient>
+        </defs>
 
-<div class="preloader">
-  <div class="graffiti-container">
-    <!-- Texte MMCP avec effet graffiti -->
-    <svg class="graffiti-text" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <!-- Gradient coloré -->
-        <linearGradient id="graffiti-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#fc54b9;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#a346ff;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#ee8d05;stop-opacity:1" />
-        </linearGradient>
-      </defs>
-      
-      <!-- Texte MMCP (SANS FILTRE) -->
-      <text x="200" y="70" text-anchor="middle" class="graffiti-letter">MMCP</text>
-    </svg>
+        <!-- Texte MMCP (SANS FILTRE) -->
+        <text x="200" y="70" text-anchor="middle" class="graffiti-letter">MMCP</text>
+      </svg>
+    </div>
   </div>
-</div>
-
-
-  <!-- ============================================================
-       CONTENU PRINCIPAL
-       ============================================================ -->
 
   <header class="header container">
-    <a href="#" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a>
+    <!-- <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a> -->
     <button>☰</button>
   </header>
+
+  <div class="page-transition"></div>
 
   <nav class="nav container">
     <ul class="nav-links">
@@ -53,7 +46,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero container" id="hero">
 
     <video loop preload="auto" autoplay muted playsinline>
@@ -69,7 +61,6 @@
       pour transformer les espaces urbains.
     </p>
 
-    <!-- Ticker Banner -->
     <a href="evenements.html" class="ticker-banner">
       <div class="ticker-wrapper">
         <!-- Premier set -->
@@ -115,7 +106,6 @@
 
   </section>
 
-  <!-- Scripts -->
   <script src="js/preloader.js"></script>
   <script>
     const menuBtn = document.querySelector('header button');

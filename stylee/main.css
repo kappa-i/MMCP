@@ -32,3 +32,5 @@
 /* 6. UTILITIES - Helpers et responsive */
 @import url('utilities/spacing.css');
 @import url('utilities/responsive.css');
+@import "components/page-transition.css";
+
