@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MMCP Collectif - Accueil</title>
   <link rel="stylesheet" href="stylee/main.css">
+  <script src="js/app.js"></script>
+  <script src="js/preloader.js"></script>
 </head>
 
 <body>
@@ -30,7 +32,7 @@
   </div>
 
   <header class="header container">
-    <!-- <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a> -->
+    <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a>
     <button>☰</button>
   </header>
 
@@ -104,32 +106,7 @@
       </div>
     </a>
 
-  </section>
-
-  <script src="js/preloader.js"></script>
-  <script>
-    const menuBtn = document.querySelector('header button');
-    const navMenu = document.querySelector('.nav');
-    const navLogo = document.querySelector('.nav-logo img');
-
-    menuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-
-      if (navMenu.classList.contains('open')) {
-        menuBtn.innerHTML = '✕';
-        navLogo.style.display = 'none';
-        document.body.classList.add("hide-scroll");
-        disableScroll();
-      } else {
-        menuBtn.innerHTML = '☰';
-        navLogo.style.display = 'block';
-        document.body.classList.remove("hide-scroll");
-        enableScroll();
-      }
-    });
-  </script>
-
-  <script src="js/app.js"></script>
+  </section>  
 
 </body>
 

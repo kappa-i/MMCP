@@ -76,7 +76,7 @@
 }
 
 .nav-links a:hover {
-    color: rgba(231, 255, 50, 0.866);
+    color: var(--purple);
 }
 
 /* Positionnement décalé */

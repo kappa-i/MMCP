@@ -33,7 +33,7 @@
   </div>
 
   <header class="header container" id="top">
-    <!-- <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a> -->
+    <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a>
     <button id="smart-burger">☰</button>
   </header>
 
@@ -304,25 +304,7 @@
   </footer>
 
   <script>
-    // Menu burger
-    const menuBtn = document.querySelector('header button');
-    const navMenu = document.querySelector('.nav');
-    const navLogo = document.querySelector('.nav-logo img');
-
-    menuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-
-      if (navMenu.classList.contains('open')) {
-        menuBtn.innerHTML = '✕';
-        navLogo.style.display = 'none';
-        disableScroll();
-      } else {
-        menuBtn.innerHTML = '☰';
-        navLogo.style.display = 'block';
-        enableScroll();
-      }
-    });
-
+   
     // Countdown Timer
     function updateCountdown() {
       // Date de l'événement (25 Janvier 2025 à 14h00)

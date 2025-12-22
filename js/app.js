@@ -15,6 +15,55 @@ function enableScroll() {
 }
 
 
+// ============================================================
+// MENU BURGER PRINCIPAL - FONCTIONNE SUR TOUTES LES PAGES
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('header button');
+    const navMenu = document.querySelector('.nav');
+    const navLogo = document.querySelector('.nav-logo');
+
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+
+            if (navMenu.classList.contains('open')) {
+                menuBtn.innerHTML = '✕';
+                menuBtn.setAttribute('aria-label', 'Fermer le menu');
+                
+                // Changer la couleur en blanc (menu ouvert = fond sombre)
+                menuBtn.style.color = 'var(--white)';
+                
+                // Cacher le logo s'il existe
+                if (navLogo) navLogo.style.opacity = '0';
+                
+                // Gérer le scroll selon la page
+                if (document.body.classList.contains('index-page')) {
+                    document.body.classList.add('hide-scroll');
+                }
+                disableScroll();
+            } else {
+                menuBtn.innerHTML = '☰';
+                menuBtn.setAttribute('aria-label', 'Ouvrir le menu');
+                
+                // Restaurer la couleur selon le contexte
+                // Retirer le style inline pour laisser le CSS ou SmartHeader gérer
+                menuBtn.style.color = '';
+                
+                // Afficher le logo s'il existe
+                if (navLogo) navLogo.style.opacity = '1';
+                
+                // Restaurer le scroll
+                if (document.body.classList.contains('index-page')) {
+                    document.body.classList.remove('hide-scroll');
+                }
+                enableScroll();
+            }
+        });
+    }
+});
+
+
 // Gestion de l'apparition du bouton "Up" au scroll
 document.addEventListener('DOMContentLoaded', () => {
     const upBtn = document.querySelector('.up-container');
@@ -47,13 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 class SmartHeader {
     constructor() {
-        this.header = document.querySelector('header');
-        this.burger = document.querySelector('#smart-burger');
-        this.navMenu = document.querySelector('.nav');
-        
-        if (!this.header || !this.burger) return;
-        
-        this.init();
+        try {
+            this.header = document.querySelector('header');
+            this.burger = document.querySelector('#smart-burger');
+            this.navMenu = document.querySelector('.nav');
+            
+            if (!this.header || !this.burger) {
+                // SmartHeader est optionnel, seulement pour evenements.html
+                return;
+            }
+            
+            this.init();
+        } catch (error) {
+            console.error('SmartHeader initialization error:', error);
+        }
     }
 
     init() {
@@ -72,8 +128,9 @@ class SmartHeader {
     }
 
     checkBackground() {
-        // Si le menu est ouvert, ne pas changer la couleur
+        // Si le menu est ouvert, forcer le mode blanc
         if (this.navMenu && this.navMenu.classList.contains('open')) {
+            this.burger.style.color = 'var(--white)';
             this.burger.classList.add('on-dark');
             this.burger.classList.remove('on-light');
             return;
@@ -156,11 +213,13 @@ class SmartHeader {
     setLightMode() {
         this.burger.classList.remove('on-dark');
         this.burger.classList.add('on-light');
+        this.burger.style.color = 'var(--black)';
     }
 
     setDarkMode() {
         this.burger.classList.remove('on-light');
         this.burger.classList.add('on-dark');
+        this.burger.style.color = 'var(--white)';
     }
 }
 
@@ -270,4 +329,3 @@ class PageTransition {
 window.addEventListener('DOMContentLoaded', () => {
     new PageTransition();
 });
-
