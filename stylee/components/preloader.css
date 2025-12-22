@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    will-change: transform;
     transition: transform 0.5s ease-out; 
     overflow: hidden;
 }

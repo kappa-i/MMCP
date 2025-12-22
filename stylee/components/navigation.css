@@ -11,9 +11,9 @@
     height: 100vh;
     background: #7e3ffb;
     background: radial-gradient(
-        circle,
-        rgba(126, 63, 251, 1) 0%,
-        rgba(252, 146, 70, 1) 100%
+        circle at center,
+        #666666 0%,
+        #63007f 100%
     );
     display: flex;
     justify-content: center;

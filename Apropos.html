@@ -7,9 +7,30 @@
   <title>À propos - MMCP</title>
   <link rel="stylesheet" href="stylee/main.css">
   <script src="js/app.js"></script>
+  <script src="js/preloader.js"></script>
+
 </head>
 
 <body>
+
+  <div class="preloader">
+    <div class="graffiti-container">
+      <!-- Texte MMCP avec effet graffiti -->
+      <svg class="graffiti-text" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <!-- Gradient coloré -->
+          <linearGradient id="graffiti-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fc54b9;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#a346ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ee8d05;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+
+        <!-- Texte MMCP (SANS FILTRE) -->
+        <text x="200" y="70" text-anchor="middle" class="graffiti-letter">MMCP</text>
+      </svg>
+    </div>
+  </div>
 
   <header class="header container">
     <!-- <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a> -->
@@ -148,6 +169,36 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>MMCP Collectif</h4>
+          <p>Make Moves, Create Peace</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Ton email">
+            <button>S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Menu burger
