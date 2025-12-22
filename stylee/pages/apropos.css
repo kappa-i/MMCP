@@ -4,17 +4,17 @@
 
 /* Bandeau intro */
 .bandeau {
-    margin-top: 5rem;
-    padding: 5rem;
+    margin-top: var(--spacing-3xl);
+    padding: var(--spacing-3xl);
 }
 
 .intro {
-    padding: 0 2rem;
+    padding: 0 var(--spacing-xl);
     gap: var(--spacing-md);
 }
 
 .intro p {
-    margin-top: 3rem;
+    margin-top: var(--spacing-2xl);
     color: var(--black);
     font-weight: bold;
 }
@@ -55,7 +55,7 @@
 }
 
 #equipe .artist-section {
-    margin: 0 0 5rem 0;
+    margin: 0 0 var(--spacing-3xl) 0;
     padding: 0;
     border: none;
 }
@@ -64,8 +64,8 @@
     margin: 0;
 }
 
-.section{
-    padding: 2rem;
+.section {
+    padding: var(--spacing-xl);
 }
 
 #equipe .section.container {

@@ -6,7 +6,7 @@ header.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: var(--spacing-sm-plus) 5%;
     position: absolute;
     top: 0;
     left: 0;
@@ -26,4 +26,3 @@ header button {
     z-index: 1101;
     transition: transform var(--transition-normal);
 }
-

@@ -29,7 +29,7 @@ footer {
 .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: var(--spacing-xs-plus);
 }
 
 .footer-links a {
@@ -60,7 +60,7 @@ footer {
 
 .newsletter input {
     flex: 1;
-    padding: 12px 14px;
+    padding: var(--spacing-xs-plus) 14px;
     border: none;
     outline: none;
     background: transparent;
@@ -73,7 +73,7 @@ footer {
 }
 
 .newsletter button {
-    padding: 0 20px;
+    padding: 0 var(--spacing-sm-plus);
     background: var(--pink);
     font-weight: 700;
     font-size: 14px;
@@ -84,4 +84,3 @@ footer {
 .newsletter button:hover {
     background: var(--orange);
 }
-

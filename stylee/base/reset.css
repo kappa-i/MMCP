@@ -8,9 +8,8 @@ body, html {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
-
 
 *,
 *::before,
@@ -53,4 +52,3 @@ img {
     height: auto;
     display: block;
 }
-

@@ -3,8 +3,8 @@
    ============================================================ */
 
 .artist-section {
-    margin-bottom: 80px;
-    padding-bottom: 80px;
+    margin-bottom: var(--spacing-2xl-plus);
+    padding-bottom: var(--spacing-2xl-plus);
     border-bottom: 1px solid var(--line);
 }
 
@@ -17,13 +17,13 @@
     grid-template-columns: 400px 1fr;
     gap: var(--spacing-xl);
     align-items: start;
-    padding: 0 5rem;
-    }
+    padding: 0 var(--spacing-3xl);
+}
 
 .artist-info h2 {
     font-size: 48px;
     font-weight: 900;
-    margin-bottom: 12px;
+    margin-bottom: var(--spacing-xs-plus);
     line-height: 1.1;
 }
 
@@ -47,12 +47,12 @@
 .artist-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: var(--spacing-xs-plus);
     margin-top: var(--spacing-md);
 }
 
 .artist-tag {
-    padding: 8px 16px;
+    padding: var(--spacing-xs) var(--spacing-sm);
     background: #f5f5f5;
     font-size: 13px;
     font-weight: 600;
@@ -62,7 +62,7 @@
 
 .artist-socials {
     display: flex;
-    gap: 5rem;
+    gap: var(--spacing-3xl);
     margin-top: var(--spacing-lg);
     flex-wrap: wrap;
     justify-content: center;
@@ -72,7 +72,7 @@
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-xs);
-    padding: 12px 20px;
+    padding: var(--spacing-xs-plus) var(--spacing-sm-plus);
     font-size: 14px;
     font-weight: 600;
     color: var(--black);
@@ -83,4 +83,3 @@
 .social-link span {
     font-size: 18px;
 }
-

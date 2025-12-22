@@ -1,6 +1,5 @@
 /* ============================================================
    MAIN.CSS - Fichier principal d'import
-   Remplace style.css
    ============================================================ */
 
 /* 1. BASE - Fondations */
@@ -14,11 +13,13 @@
 @import url('layout/footer.css');
 
 /* 3. COMPONENTS - Éléments réutilisables */
+@import url('components/preloader.css');  /* ← NOUVEAU */
 @import url('components/buttons.css');
 @import url('components/cards.css');
 @import url('components/forms.css');
 @import url('components/navigation.css');
 @import url('components/media.css');
+
 /* 4. SECTIONS - Blocs de contenu */
 @import url('sections/hero.css');
 @import url('sections/events.css');

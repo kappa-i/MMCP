@@ -58,7 +58,7 @@
     position: relative;
     z-index: 2;
     max-width: 520px;
-    margin: var(--spacing-lg) auto 40px;
+    margin: var(--spacing-lg) auto var(--spacing-lg-plus);
     color: var(--white);
     font-size: 18px;
     width: 90%;
@@ -66,16 +66,16 @@
 
 /* Page header */
 .page-header {
-    padding: 80px 0 60px;
+    padding: var(--spacing-2xl-plus) 0 var(--spacing-xl-plus);
     text-align: center;
-    margin: 4rem auto 0 auto;
+    margin: var(--spacing-2xl) auto 0 auto;
 }
 
 .page-header h1 {
     font-size: clamp(48px, 8vw, 72px);
     font-weight: 900;
     line-height: 1;
-    margin: 3rem 0;
+    margin: var(--spacing-2xl) 0;
 }
 
 .page-header .subtitle {
@@ -98,18 +98,18 @@
     grid-template-columns: 1.2fr 0.8fr;
     gap: var(--spacing-2xl);
     align-items: center;
-    margin: 5rem auto;
+    margin: var(--spacing-3xl) auto;
 }
 
 .next-event-hero h1 {
     line-height: 1.1;
     font-weight: 900;
-    margin: 20px 0;
+    margin: var(--spacing-sm-plus) 0;
 }
 
 .hero-content {
     z-index: 2;
-    padding: 40px 24px;
+    padding: var(--spacing-lg-plus) var(--spacing-md);
 }
 
 .hero-content h1{
@@ -141,146 +141,145 @@
     font-size: 18px;
     line-height: 1.6;
     color: #ccc;
-    margin-bottom: 40px;
+    margin-bottom: var(--spacing-lg-plus);
 }
 
-    /* Ticker Banner - Effet infini */
-    .ticker-banner {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: var(--black);
-      border-top: 3px solid var(--pink);
-      overflow: hidden;
-      z-index: 10;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+/* Ticker Banner - Effet infini */
+.ticker-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--black);
+    border-top: 3px solid var(--pink);
+    overflow: hidden;
+    z-index: 10;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
 
-    .ticker-banner:hover {
-      border-top-color: var(--purple);
-    }
+.ticker-banner:hover {
+    border-top-color: var(--purple);
+}
 
-    .ticker-wrapper {
-      display: flex;
-      width: fit-content;
-      animation: ticker-scroll 30s linear infinite;
-      padding: 18px 0;
-    }
+.ticker-wrapper {
+    display: flex;
+    width: fit-content;
+    animation: ticker-scroll 30s linear infinite;
+    padding: 18px 0;
+}
 
-    .ticker-banner:hover .ticker-wrapper {
-      animation-play-state: paused;
-    }
+.ticker-banner:hover .ticker-wrapper {
+    animation-play-state: paused;
+}
 
-    .ticker-content {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
+.ticker-content {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
 
-    .ticker-item {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      white-space: nowrap;
-      padding: 0 60px;
-      color: var(--white);
-      font-weight: 700;
-      font-size: 18px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    white-space: nowrap;
+    padding: 0 var(--spacing-xl-plus);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
 
-    .ticker-text {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+.ticker-text {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs-plus);
+}
 
-    .ticker-banner:hover .ticker-text {
-      text-shadow: 0 0 20px rgb(136, 0, 255);
-    }
+.ticker-banner:hover .ticker-text {
+    text-shadow: 0 0 var(--spacing-sm-plus) rgb(136, 0, 255);
+}
 
-    .ticker-separator {
-      width: 10px;
-      height: 10px;
-      background: var(--pink);
-      border-radius: 50%;
-      flex-shrink: 0;
-      animation: blink 2s ease-in-out infinite;
-      margin: 0 20px;
-    }
+.ticker-separator {
+    width: 10px;
+    height: 10px;
+    background: var(--pink);
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: blink 2s ease-in-out infinite;
+    margin: 0 var(--spacing-sm-plus);
+}
 
-    .ticker-banner:hover .ticker-separator {
-      background: var(--purple);
-    }
+.ticker-banner:hover .ticker-separator {
+    background: var(--purple);
+}
 
-    @keyframes ticker-scroll {
-      0% {
+@keyframes ticker-scroll {
+    0% {
         transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
     }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
-    @keyframes blink {
-      0%, 100% {
+@keyframes blink {
+    0%, 100% {
         opacity: 1;
         transform: scale(1);
-      }
-      50% {
+    }
+    50% {
         opacity: 0.3;
         transform: scale(0.8);
-      }
     }
+}
 
-    .ticker-banner::before {
-      content: '';
-      position: absolute;
-      top: -3px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, 
+.ticker-banner::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
         var(--pink), 
         var(--purple), 
         var(--orange), 
         var(--pink));
-      background-size: 200% 100%;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      animation: gradient-shift 3s linear infinite;
-    }
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    animation: gradient-shift 3s linear infinite;
+}
 
-    .ticker-banner:hover::before {
-      opacity: 1;
-    }
+.ticker-banner:hover::before {
+    opacity: 1;
+}
 
-    @keyframes gradient-shift {
-      0% {
+@keyframes gradient-shift {
+    0% {
         background-position: 0% 50%;
-      }
-      100% {
+    }
+    100% {
         background-position: 200% 50%;
-      }
     }
+}
 
-    @media (max-width: 768px) {
-      .ticker-item {
+@media (max-width: 768px) {
+    .ticker-item {
         font-size: 14px;
-        padding: 0 40px;
-      }
-
-      .ticker-wrapper {
-        padding: 14px 0;
-      }
-
-      .ticker-separator {
-        width: 8px;
-        height: 8px;
-        margin: 0 15px;
-      }
+        padding: 0 var(--spacing-lg-plus);
     }
 
+    .ticker-wrapper {
+        padding: 14px 0;
+    }
+
+    .ticker-separator {
+        width: var(--spacing-xs);
+        height: var(--spacing-xs);
+        margin: 0 15px;
+    }
+}

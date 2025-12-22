@@ -2,10 +2,9 @@
    3-COMPONENTS/BUTTONS.CSS
    ============================================================ */
 
-
 .btn {
     display: inline-block;
-    padding: 14px 24px;
+    padding: 14px var(--spacing-md);
     font-weight: 600;
     font-size: 14px;
     transition: var(--transition-fast);
@@ -31,7 +30,7 @@
     background: var(--pink);
     color: var(--white) !important;
     border: none !important;
-    padding: 18px 32px;
+    padding: 18px var(--spacing-lg);
     font-size: 16px;
     border-radius: var(--radius-md);
 }
@@ -43,7 +42,7 @@
 
 /* Social buttons */
 .social-btn {
-    padding: 12px 24px;
+    padding: var(--spacing-xs-plus) var(--spacing-md);
     border: 1px solid var(--line);
     font-weight: 600;
     font-size: 14px;
@@ -63,25 +62,23 @@
     flex-wrap: wrap;
 }
 
-/* Style du bouton Retour en haut */
+/* Bouton Retour en haut */
 .up-container {
-    position: fixed; /* Reste visible à l'écran lors du scroll */
-    right: 20px;
-    bottom: 20px;
+    position: fixed;
+    right: var(--spacing-sm-plus);
+    bottom: var(--spacing-sm-plus);
     z-index: 1000;
     background-color: var(--white);
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre pour le détacher du fond */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     
-    /* État masqué par défaut */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s ease; /* Animation fluide */
+    transform: translateY(var(--spacing-sm-plus));
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
-/* État affiché via JavaScript */
 .up-container.visible {
     opacity: 1;
     visibility: visible;
@@ -89,7 +86,7 @@
 }
 
 .up {
-    width: 40px;
-    height: 40px;
-    display: block; /* Supprime l'espace sous l'image */
+    width: var(--spacing-lg-plus);
+    height: var(--spacing-lg-plus);
+    display: block;
 }

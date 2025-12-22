@@ -23,7 +23,7 @@
     .event .btn {
         grid-column: 2;
         justify-self: start;
-        margin-top: 12px;
+        margin-top: var(--spacing-xs-plus);
     }
 
     /* Navigation */
@@ -50,18 +50,16 @@
     .artist-header {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
-        padding: 0 2rem;
+        padding: 0 var(--spacing-xl);
     }
 
-    p{
-        padding: 0 2rem;
-
+    p {
+        padding: 0 var(--spacing-xl);
     }
 
     p.artist-bio {
-
-    padding: 0
-    ;    }
+        padding: 0;
+    }
 
     .artist-photo {
         padding-bottom: 100%;
@@ -78,7 +76,7 @@
     /* Hero grid */
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: var(--spacing-lg-plus);
     }
 
     .hero-image img {
@@ -86,7 +84,7 @@
     }
 
     .next-event-hero {
-        padding: 60px 0;
+        padding: var(--spacing-xl-plus) 0;
     }
 
     /* Histoire grid */
@@ -101,14 +99,14 @@
     }
 
     .bandeau {
-        padding: 3rem 1rem;
+        padding: var(--spacing-2xl) var(--spacing-sm);
     }
 }
 
 @media (max-width: 600px) {
     /* Container plus étroit sur petit mobile */
     .container {
-        width: calc(100% - 32px);
+        width: calc(100% - var(--spacing-lg));
     }
 
     /* Réduction des espacements */
@@ -131,10 +129,10 @@
     }
 
     .nav-links li {
-        padding: 20px 0;
+        padding: var(--spacing-sm-plus) 0;
     }
 
-    /* Reset du positionnement décalé sur très petit écran */
+    /* Reset du positionnement décalé */
     .nav-links li:nth-child(1),
     .nav-links li:nth-child(2),
     .nav-links li:nth-child(3),
@@ -152,13 +150,13 @@
 
     /* Logo plus petit */
     .nav-logo img {
-        height: 40px;
+        height: var(--spacing-lg-plus);
     }
 
     /* Video container */
     .video-container {
         max-width: 100%;
-        margin: 4rem auto;
+        margin: var(--spacing-2xl) auto;
     }
 
     .video-placeholder > video {
@@ -172,13 +170,13 @@
 
     /* Bandeau */
     .bandeau {
-        margin-top: 3rem;
-        padding: 2rem 1rem;
+        margin-top: var(--spacing-2xl);
+        padding: var(--spacing-xl) var(--spacing-sm);
     }
 
     /* Artist socials */
     .artist-socials {
-        gap: 2rem;
+        gap: var(--spacing-xl);
     }
 
     .icon {

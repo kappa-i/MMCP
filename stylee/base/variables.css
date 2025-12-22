@@ -16,13 +16,19 @@
     --black: #0a0a0a;
     --white: #ffffff;
     
-    /* Espacements */
+    /* Espacements - SYSTÈME COMPLET */
+    --spacing-2xs: 6px;
     --spacing-xs: 8px;
+    --spacing-xs-plus: 12px;
     --spacing-sm: 16px;
+    --spacing-sm-plus: 20px;
     --spacing-md: 24px;
     --spacing-lg: 32px;
+    --spacing-lg-plus: 40px;
     --spacing-xl: 48px;
+    --spacing-xl-plus: 60px;
     --spacing-2xl: 64px;
+    --spacing-2xl-plus: 80px;
     --spacing-3xl: 96px;
     
     /* Transitions */
