@@ -59,7 +59,15 @@ const preventScrollDuringOverlays = () => {
         body.style.top = '';
         body.style.width = '';
         body.style.overflow = '';
-        window.scrollTo(0, scrollPosition);
+
+        // Ne pas restaurer la position de scroll sur index.html
+        const isIndexPage = window.location.pathname.endsWith('index.html') ||
+                           window.location.pathname === '/' ||
+                           window.location.pathname.endsWith('/');
+
+        if (!isIndexPage) {
+            window.scrollTo(0, scrollPosition);
+        }
     };
     
     // Observer le preloader
@@ -126,44 +134,12 @@ document.addEventListener('DOMContentLoaded', preventScrollDuringOverlays);
 
 
 /* ============================================================
-   FIX SPÉCIAL INDEX.HTML - Page entière en 100vh
+   FIX SPÉCIAL INDEX.HTML - Marquer la page
    ============================================================ */
 
 // Détecter si on est sur index.html
 if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
     document.body.classList.add('index-page');
-    
-    // Empêcher complètement le scroll sur index
-    document.addEventListener('DOMContentLoaded', () => {
-        const hero = document.querySelector('.hero');
-        
-        if (hero) {
-            // Bloquer le scroll de la page
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-            
-            // Empêcher le scroll tactile
-            let startY = 0;
-            
-            document.addEventListener('touchstart', (e) => {
-                startY = e.touches[0].pageY;
-            }, { passive: false });
-            
-            document.addEventListener('touchmove', (e) => {
-                // Permettre le scroll SEULEMENT dans le menu nav quand il est ouvert
-                const nav = document.querySelector('.nav');
-                if (nav && nav.classList.contains('open')) {
-                    // Laisser le menu scroller
-                    if (e.target.closest('.nav-links')) {
-                        return;
-                    }
-                }
-                
-                // Sinon, bloquer tous les mouvements
-                e.preventDefault();
-            }, { passive: false });
-        }
-    });
 }
 
 

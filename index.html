@@ -115,8 +115,65 @@
 
   </section>
 
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>MMCP Collectif</h4>
+          <p>Make Moves, Create Peace</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Ton email">
+            <button>S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+  
   <script src="js/animations.js"></script>
 
+  <script>
+    // Empêcher le scroll automatique vers le haut lors du redémarrage de la vidéo
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroVideo = document.querySelector('.hero video');
+
+      if (heroVideo) {
+        // Gérer le redémarrage de la vidéo sans scroll
+        heroVideo.addEventListener('ended', (e) => {
+          e.preventDefault();
+
+          // Sauvegarder la position actuelle
+          const currentScroll = window.scrollY;
+
+          // Relancer la vidéo
+          heroVideo.currentTime = 0;
+          heroVideo.play();
+
+          // Si la position a changé, la restaurer
+          setTimeout(() => {
+            if (window.scrollY !== currentScroll) {
+              window.scrollTo(0, currentScroll);
+            }
+          }, 0);
+        });
+      }
+    });
+  </script>
 
 </body>
 
