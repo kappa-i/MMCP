@@ -29,3 +29,9 @@ img.logo {
   width: 75%;
   z-index: 2001;
 }
+
+@media (max-width: 900px) {
+    main{
+        height: 90vh;
+    }
+}
