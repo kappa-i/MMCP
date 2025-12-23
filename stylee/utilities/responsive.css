@@ -54,7 +54,7 @@
     }
 
     p {
-        padding: 0 var(--spacing-xl);
+        padding: 0
     }
 
     p.artist-bio {
