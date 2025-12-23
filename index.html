@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MMCP Collectif - Accueil</title>
   <link rel="stylesheet" href="stylee/main.css">
+  <link rel="stylesheet" href="stylee/utilities/animations.css">
   <script src="js/app.js"></script>
   <script src="js/preloader.js"></script>
   <script src="js/safari-fix.js"></script>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://codepen.io/GreenSock/pen/vYqpyLg.js"></script>
 
 </head>
 
@@ -49,16 +53,18 @@
     </ul>
   </nav>
 
+    <main>
+      <div class="logo-outer">
+        <img src="img/mmcp.png" alt="logo" class="logo">
+      </div>
+    </main>
+
   <section class="hero container" id="hero">
 
     <video loop preload="auto" autoplay muted playsinline>
       <source src="img/home.mp4" type="video/mp4">
     </video>
 
-    <h1>
-      MAKE <span class="orange">MOVES</span><br>
-      <span class="pink">CREATE</span> <span class="purple">PEACE</span>
-    </h1>
     <p>
       Un collectif culturel qui utilise le mouvement, la création et la communauté
       pour transformer les espaces urbains.
@@ -107,7 +113,10 @@
       </div>
     </a>
 
-  </section>  
+  </section>
+
+  <script src="js/animations.js"></script>
+
 
 </body>
 

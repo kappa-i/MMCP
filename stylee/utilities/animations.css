@@ -1,0 +1,31 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 95vh;
+  width: 100vw;
+  z-index: 50;
+
+}
+
+.logo-outer {
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+img.logo {
+  width: 50%;
+  z-index: 2001;
+}
