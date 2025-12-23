@@ -250,7 +250,7 @@
 }
 
 /* Instagram feed */
-.instagram-feed {
+/* .instagram-feed {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
@@ -313,7 +313,127 @@
 .past-events-cta {
     margin-top: var(--spacing-lg-plus);
     text-align: center;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-just-black);
 }
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.boxes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5rem auto;
+
+}
+
+.box {
+  aspect-ratio: 1;
+  padding: 10px;
+  border: 2px dashed var(--color-surface50);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.box-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal .content {
+  height: 90vh;
+  aspect-ratio: 4/5;
+  position: relative;
+}
+
+.modal .content .box-content {
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+}
+
+.box-content.one {
+  background-image: url("/img/naye.jpg");
+}
+
+.box-content.two {
+  background-image: url("/img/iris.png");
+}
+
+.box-content.three {
+  background-image: url("https://assets.codepen.io/16327/portrait-image-12.jpg");
+}
+
+.box-content.four {
+  background-image: url("https://assets.codepen.io/16327/portrait-image-2.jpg");
+}
+
+.box-content.five {
+  background-image: url("https://assets.codepen.io/16327/portrait-image-4.jpg");
+}
+
+.box-content.six {
+  background-image: url("https://assets.codepen.io/16327/portrait-image-8.jpg");
+}
+
+
 
 /* ============================================================
    RESPONSIVE
@@ -338,6 +458,11 @@
     .feed-item {
         flex: 1 1 calc(33.333% - 11px);
         min-width: 180px;
+    }
+
+    /* Tablette: 2 colonnes pour la grille des boîtes */
+    .boxes-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -366,7 +491,7 @@
         width: 100%;
         height: 300px;
         clip-path: none;
-        order: -1; 
+        order: -1;
         margin-bottom: var(--spacing-2xl);
         margin-top: var(--spacing-2xl);
     }
@@ -434,6 +559,11 @@
 
     .past-events-cta {
         margin-top: var(--spacing-lg);
+    }
+
+    /* Mobile: 1 colonne pour la grille des boîtes */
+    .boxes-container {
+        grid-template-columns: 1fr;
     }
 }
 
