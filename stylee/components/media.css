@@ -82,9 +82,10 @@
     width: 75%;
     height: auto;
     max-height: 80vh;
+    min-height: 400px;
     display: block;
     object-fit: contain;
-    background: none;
+    background: #000;
 }
 
 /* Icônes sociales */

@@ -161,6 +161,7 @@
 
     .video-placeholder > video {
         width: 90%;
+        min-height: 300px;
     }
 
     /* Footer */
