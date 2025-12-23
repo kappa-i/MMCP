@@ -235,7 +235,22 @@ class SmartHeader {
 
 // Initialiser au chargement de la page
 window.addEventListener('DOMContentLoaded', () => {
-    new SmartHeader();
+    // Ne pas activer SmartHeader sur index.html
+    // Sur la page d'accueil, le burger doit toujours être blanc (fond vidéo sombre)
+    const isIndexPage = window.location.pathname.endsWith('index.html') ||
+                        window.location.pathname === '/' ||
+                        window.location.pathname.endsWith('/');
+
+    if (!isIndexPage) {
+        new SmartHeader();
+    } else {
+        // Sur index.html, forcer le burger en blanc
+        const burger = document.querySelector('#smart-burger');
+        if (burger) {
+            burger.style.color = 'var(--white)';
+            burger.classList.add('on-dark');
+        }
+    }
 });
 
 

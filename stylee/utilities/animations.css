@@ -16,8 +16,8 @@ main {
 }
 
 .logo-outer {
-  width: 100%;
-  height: 100%;
+  width: 75%;
+  height: 80%;
   border-radius: 3rem;
   display: flex;
   align-items: center;
@@ -26,6 +26,6 @@ main {
 }
 
 img.logo {
-  width: 50%;
+  width: 75%;
   z-index: 2001;
 }
