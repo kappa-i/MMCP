@@ -108,3 +108,58 @@
     padding-right: 5%;
     transition-delay: 0.6s;
 }
+
+
+/* Mode paysage mobile - Tout faire rentrer sans scroll */
+@media (max-height: 500px) and (orientation: landscape) {
+    .nav {
+        align-items: center;
+        padding: 60px 20px 20px; /* Réduire les paddings */
+    }
+    
+    .nav-links {
+        margin-top: 0; /* Supprimer la marge du haut */
+        gap: 0; /* Supprimer les gaps entre items */
+    }
+    
+    .nav-links li {
+        padding: 8px 0; /* Réduire drastiquement le padding */
+        background-size: 10px 1px; /* Ligne plus petite */
+    }
+    
+    .nav-links a {
+        font-size: 1.5rem; /* Réduire la taille du texte */
+    }
+    
+    /* Réduire les délais de positionnement */
+    .nav-links li:nth-child(1) {
+        padding-left: 5%;
+    }
+    
+    .nav-links li:nth-child(2) {
+        padding-right: 8%;
+    }
+    
+    .nav-links li:nth-child(4) {
+        padding-left: 10%;
+    }
+    
+    .nav-links li:nth-child(5) {
+        padding-right: 3%;
+    }
+}
+
+/* Mode paysage très petit (ex: iPhone SE en paysage) */
+@media (max-height: 400px) and (orientation: landscape) {
+    .nav {
+        padding: 50px 15px 15px;
+    }
+    
+    .nav-links li {
+        padding: 5px 0; /* Encore plus compact */
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem; /* Encore plus petit */
+    }
+}

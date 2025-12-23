@@ -58,6 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.classList.remove('hide-scroll');
                 }
                 enableScroll();
+                
+                // ← NOUVEAU : Forcer SmartHeader à recalculer la couleur
+                if (window.smartHeaderInstance) {
+                    setTimeout(() => {
+                        window.smartHeaderInstance.checkBackground();
+                    }, 100);
+                }
             }
         });
     }
@@ -95,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================================ */
 
 class SmartHeader {
-    constructor() {
+        constructor() {
         try {
             this.header = document.querySelector('header');
             this.burger = document.querySelector('#smart-burger');
@@ -105,6 +112,9 @@ class SmartHeader {
                 // SmartHeader est optionnel, seulement pour evenements.html
                 return;
             }
+            
+            // ← NOUVEAU : Exposer l'instance globalement
+            window.smartHeaderInstance = this;
             
             this.init();
         } catch (error) {
