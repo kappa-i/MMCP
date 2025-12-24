@@ -411,6 +411,7 @@ body {
 
 .box-content img {
     border-radius: 10px;
+    border: solid black 10px;
 }
 
 
