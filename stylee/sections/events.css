@@ -249,72 +249,6 @@
     font-size: 16px;
 }
 
-/* Instagram feed */
-/* .instagram-feed {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg-plus);
-}
-
-.feed-item {
-    position: relative;
-    flex: 1 1 calc(25% - 12px);
-    aspect-ratio: 1;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--black);
-    min-width: 200px;
-}
-
-.feed-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-normal), opacity var(--transition-normal);
-}
-
-.feed-item:hover img {
-    transform: scale(1.1);
-    opacity: 0.7;
-}
-
-.feed-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: var(--spacing-sm-plus);
-    opacity: 0;
-    transition: opacity var(--transition-normal);
-}
-
-.feed-item:hover .feed-overlay {
-    opacity: 1;
-}
-
-.feed-title {
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
-.feed-date {
-    color: var(--pink);
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.past-events-cta {
-    margin-top: var(--spacing-lg-plus);
-    text-align: center;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -413,29 +347,164 @@ body {
     border-radius: 10px;
 }
 
-/* Bouton "En voir plus" dans la modal */
+/* ============================================================
+   BOUTON MODAL RESPONSIVE - VERSION AMÉLIORÉE
+   ============================================================ */
+
 .modal-event-btn {
     position: absolute;
-    top: 75%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.558);
+    
+    /* Design moderne */
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
     color: var(--white);
-    padding: 14px 32px;
+    
+    /* Padding et taille responsive */
+    padding: clamp(10px, 2.5vw, 16px) clamp(20px, 5vw, 40px);
     border-radius: 50px;
-    font-size: 16px;
+    font-size: clamp(12px, 3vw, 16px);
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    
+    /* Layout */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    max-width: 85%;
+    min-width: fit-content;
+    text-align: center;
+    
+    /* Effets */
     cursor: pointer;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1003;
+    
+    /* Prévenir les problèmes de touch */
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
-.modal-event-btn:hover {
-    box-shadow: 0 6px 20px rgba(252, 84, 185, 0.6);
-    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+/* État hover (desktop uniquement) */
+@media (hover: hover) {
+    .modal-event-btn:hover {
+        box-shadow: 0 6px 25px rgba(252, 84, 185, 0.7);
+        background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+        transform: translateX(-50%) translateY(-3px);
+    }
+}
+
+/* État actif (mobile et desktop) */
+.modal-event-btn:active {
+    transform: translateX(-50%) translateY(-1px);
+    box-shadow: 0 3px 12px rgba(252, 84, 185, 0.5);
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS POUR LE BOUTON MODAL
+   ============================================================ */
+
+/* Grands écrans (>1200px) */
+@media (min-width: 1200px) {
+    .modal-event-btn {
+        padding: 16px 44px;
+        font-size: 16px;
+        bottom: 12%;
+    }
+}
+
+/* Desktop standard (900px - 1200px) */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .modal-event-btn {
+        padding: 14px 36px;
+        font-size: 15px;
+        bottom: 12%;
+    }
+}
+
+/* Tablette (600px - 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+    .modal-event-btn {
+        padding: 12px 28px;
+        font-size: 14px;
+        bottom: 12%;
+        max-width: 80%;
+    }
+}
+
+/* Mobile large (480px - 599px) */
+@media (min-width: 480px) and (max-width: 599px) {
+    .modal-event-btn {
+        padding: 11px 24px;
+        font-size: 13px;
+        bottom: 12%;
+        max-width: 75%;
+        letter-spacing: 0.03em;
+    }
+}
+
+/* Mobile moyen (380px - 479px) */
+@media (min-width: 380px) and (max-width: 479px) {
+    .modal-event-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+        bottom: 6%;
+        max-width: 70%;
+        letter-spacing: 0.02em;
+    }
+}
+
+/* Petit mobile (<380px) */
+@media (max-width: 379px) {
+    .modal-event-btn {
+        padding: 9px 16px;
+        font-size: 11px;
+        bottom: 5%;
+        max-width: 65%;
+        letter-spacing: 0.01em;
+        border-radius: 40px;
+    }
+}
+
+/* Mode paysage mobile - Ajustements spécifiques */
+@media (max-height: 600px) and (orientation: landscape) {
+    .modal-event-btn {
+        padding: 8px 20px;
+        font-size: 12px;
+        bottom: 5%;
+    }
+    
+    .modal .content {
+        height: 85vh;
+    }
+}
+
+/* Mode paysage très court */
+@media (max-height: 450px) and (orientation: landscape) {
+    .modal-event-btn {
+        padding: 7px 16px;
+        font-size: 11px;
+        bottom: 3%;
+    }
+    
+    .modal .content {
+        height: 80vh;
+    }
+}
+
+/* Support pour les écrans à haute densité (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .modal-event-btn {
+        /* Légèrement plus fin sur écrans Retina pour meilleure lisibilité */
+        font-weight: 600;
+    }
 }
 
 
@@ -574,11 +643,6 @@ body {
     .modal .content {
         height: 70vh;
     }
-
-    .modal-event-btn {
-        padding: 12px 24px;
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -662,12 +726,6 @@ body {
     .modal .content {
         height: 65vh;
     }
-
-    .modal-event-btn {
-        padding: 10px 20px;
-        font-size: 13px;
-        bottom: 10px;
-    }
 }
 
 @media (max-width: 360px) {
@@ -701,12 +759,6 @@ body {
     /* Modal optimisée pour très petits écrans */
     .modal .content {
         height: 60vh;
-    }
-
-    .modal-event-btn {
-        padding: 8px 16px;
-        font-size: 12px;
-        bottom: 10px;
     }
 }
 
