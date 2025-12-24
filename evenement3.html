@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Événement 3 - MMCP Collectif</title>
+  <link rel="stylesheet" href="stylee/main.css">
+  <script src="js/app.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/safari-fix.js"></script>
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="graffiti-container">
+      <svg class="graffiti-text" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="graffiti-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fc54b9;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#a346ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ee8d05;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <text x="200" y="70" text-anchor="middle" class="graffiti-letter">MMCP</text>
+      </svg>
+    </div>
+  </div>
+
+  <header class="header container" id="top">
+    <a href="index.html" class="nav-logo"><img src="img/mmcp.png" alt="logo"></a>
+    <button id="smart-burger">☰</button>
+  </header>
+
+  <nav class="nav container">
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Apropos.html">À propos</a></li>
+      <li><a href="evenements.html" class="active">Événements</a></li>
+      <li><a href="ITV.html">Interviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO DE L'ÉVÉNEMENT -->
+  <section class="section container" style="margin-top: 100px;">
+    <a href="evenements.html" class="btn" style="display: inline-block; margin-bottom: 20px;">← Retour aux événements</a>
+
+    <span class="label">Souvenir</span>
+    <h1 style="margin: 20px 0; font-size: 48px; font-weight: 900;">Nom de l'événement</h1>
+    <p style="color: var(--gray); font-size: 18px; margin-bottom: 40px;">
+      Date de l'événement • Lieu
+    </p>
+  </section>
+
+  <!-- GALERIE DE PHOTOS -->
+  <section class="section container">
+    <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 30px;">Galerie photos</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+      <!-- Ajoutez vos images ici -->
+      <div style="aspect-ratio: 1; background: var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+        Photo 1
+      </div>
+      <div style="aspect-ratio: 1; background: var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+        Photo 2
+      </div>
+      <div style="aspect-ratio: 1; background: var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+        Photo 3
+      </div>
+      <div style="aspect-ratio: 1; background: var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+        Photo 4
+      </div>
+      <div style="aspect-ratio: 1; background: var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+        Photo 5
+      </div>
+      <div style="aspect-ratio: 1; background: var(--line); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
+        Photo 6
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPTION DE L'ÉVÉNEMENT -->
+  <section class="section container">
+    <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 20px;">À propos de cet événement</h2>
+    <div style="max-width: 800px;">
+      <p style="color: var(--gray); font-size: 17px; line-height: 1.8; margin-bottom: 20px;">
+        Ajoutez ici la description de votre événement, ce qui s'est passé, les moments forts, etc.
+      </p>
+      <p style="color: var(--gray); font-size: 17px; line-height: 1.8;">
+        Vous pouvez ajouter plusieurs paragraphes pour raconter l'histoire de cet événement.
+      </p>
+    </div>
+  </section>
+
+  <!-- RETOUR -->
+  <section class="section container cta" style="text-align: center; margin: 60px auto;">
+    <a href="evenements.html" class="btn btn-primary">Voir tous les événements</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>MMCP Collectif</h4>
+          <p>Make Moves, Create Peace</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Ton email">
+            <button>S'abonner</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="up-container">
+    <a href="#top"><img class="up" src="img/up.svg" alt="up page"></a>
+  </div>
+
+</body>
+
+</html>

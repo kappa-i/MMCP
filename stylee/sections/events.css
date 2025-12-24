@@ -411,7 +411,31 @@ body {
 
 .box-content img {
     border-radius: 10px;
-    border: solid black 10px;
+}
+
+/* Bouton "En voir plus" dans la modal */
+.modal-event-btn {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.558);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1003;
+}
+
+.modal-event-btn:hover {
+    box-shadow: 0 6px 20px rgba(252, 84, 185, 0.6);
+    background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
 }
 
 
@@ -545,6 +569,16 @@ body {
     .boxes-container {
         grid-template-columns: 1fr;
     }
+
+    /* Réduire la taille de la modal sur mobile */
+    .modal .content {
+        height: 70vh;
+    }
+
+    .modal-event-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -623,6 +657,17 @@ body {
     .feed-date {
         font-size: 10px;
     }
+
+    /* Modal encore plus petite sur petits téléphones */
+    .modal .content {
+        height: 65vh;
+    }
+
+    .modal-event-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        bottom: 10px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -651,6 +696,17 @@ body {
     .event-card-badge {
         padding: 4px var(--spacing-xs);
         font-size: 10px;
+    }
+
+    /* Modal optimisée pour très petits écrans */
+    .modal .content {
+        height: 60vh;
+    }
+
+    .modal-event-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+        bottom: 10px;
     }
 }
 

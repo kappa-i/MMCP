@@ -194,32 +194,32 @@
     <div class="wrapper">
       <div class="boxes-container">
         <div class="box">
-          <div class="box-content one">
+          <div class="box-content one" data-event-page="evenement1.html">
             <img src="img/tali.jpg" alt="">
           </div>
         </div>
         <div class="box">
-          <div class="box-content two">
+          <div class="box-content two" data-event-page="evenement2.html">
             <img src="img/tali.jpg" alt="">
           </div>
         </div>
         <div class="box">
-          <div class="box-content three">
+          <div class="box-content three" data-event-page="evenement3.html">
             <img src="img/tali.jpg" alt="">
           </div>
         </div>
         <div class="box">
-          <div class="box-content four">
+          <div class="box-content four" data-event-page="evenement4.html">
             <img src="img/tali.jpg" alt="">
           </div>
         </div>
         <div class="box">
-          <div class="box-content five">
+          <div class="box-content five" data-event-page="evenement5.html">
             <img src="img/tali.jpg" alt="">
           </div>
         </div>
         <div class="box">
-          <div class="box-content six">
+          <div class="box-content six" data-event-page="evenement6.html">
             <img src="img/tali.jpg" alt="">
           </div>
         </div>
@@ -241,77 +241,78 @@
         <button>S'abonner</button>
       </div>
     </section>
+  </section>  
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>MMCP Collectif</h4>
-            <p>Make Moves, Create Peace</p>
-          </div>
-          <div class="footer-section">
-            <h4>Navigation</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="Apropos.html">À propos</a></li>
-              <li><a href="evenements.html">Événements</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Newsletter</h4>
-            <div class="newsletter">
-              <input type="email" placeholder="Ton email">
-              <button>S'abonner</button>
-            </div>
-          </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>MMCP Collectif</h4>
+          <p>Make Moves, Create Peace</p>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Apropos.html">À propos</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" placeholder="Ton email">
+            <button>S'abonner</button>
+          </div>
         </div>
       </div>
-    </footer>
-
-    <script>
-
-      // Countdown Timer
-      function updateCountdown() {
-        // Date de l'événement (25 Janvier 2025 à 14h00)
-        const eventDate = new Date('2026-01-25T14:00:00').getTime();
-        const now = new Date().getTime();
-        const distance = eventDate - now;
-
-        // Calculs
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Affichage avec zéros devant si nécessaire
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-        // Si le compte à rebours est terminé
-        if (distance < 0) {
-          document.getElementById('countdown').innerHTML = '<p style="color: var(--pink); font-size: 24px; font-weight: 700;">L\'événement a commencé !</p>';
-        }
-      }
-
-      // Mettre à jour chaque seconde
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    </script>
-
-    <script src="js/app.js"></script>
-
-    <div class="up-container">
-      <a href="#top"><img class="up" src="img/up.svg" alt="up page"></a>
+      <div class="footer-bottom">
+        <p>&copy; 2025 MMCP Collectif. Tous droits réservés.</p>
+      </div>
     </div>
+  </footer>
 
-    <script src="js/events-animations.js"></script>
+  <script>
+
+    // Countdown Timer
+    function updateCountdown() {
+      // Date de l'événement (25 Janvier 2025 à 14h00)
+      const eventDate = new Date('2026-01-25T14:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      // Calculs
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Affichage avec zéros devant si nécessaire
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+      // Si le compte à rebours est terminé
+      if (distance < 0) {
+        document.getElementById('countdown').innerHTML = '<p style="color: var(--pink); font-size: 24px; font-weight: 700;">L\'événement a commencé !</p>';
+      }
+    }
+
+    // Mettre à jour chaque seconde
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+  <script src="js/app.js"></script>
+
+  <div class="up-container">
+    <a href="#top"><img class="up" src="img/up.svg" alt="up page"></a>
+  </div>
+
+  <script src="js/events-animations.js"></script>
 
 </body>
 
