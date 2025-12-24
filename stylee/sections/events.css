@@ -409,30 +409,9 @@ body {
   opacity: 0;
 }
 
-.box-content.one {
-  background-image: url("/img/naye.jpg");
+.box-content img {
+    border-radius: 10px;
 }
-
-.box-content.two {
-  background-image: url("/img/iris.png");
-}
-
-.box-content.three {
-  background-image: url("https://assets.codepen.io/16327/portrait-image-12.jpg");
-}
-
-.box-content.four {
-  background-image: url("https://assets.codepen.io/16327/portrait-image-2.jpg");
-}
-
-.box-content.five {
-  background-image: url("https://assets.codepen.io/16327/portrait-image-4.jpg");
-}
-
-.box-content.six {
-  background-image: url("https://assets.codepen.io/16327/portrait-image-8.jpg");
-}
-
 
 
 /* ============================================================
